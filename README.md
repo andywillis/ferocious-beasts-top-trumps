@@ -1,4 +1,4 @@
-# Ferocious Animals Top Trumps 
+# Ferocious Beasts Top Trumps 
 
 An accessible Top Trumps game for all the family.
 

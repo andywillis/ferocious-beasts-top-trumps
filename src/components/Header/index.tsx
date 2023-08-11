@@ -1,14 +1,18 @@
 import style from './style.module.css';
 import Nav from '../Nav';
 
+interface HeaderProps {
+	title: string;
+}
+
 /**
  * Header
  * @return {React.Element} Header component
  */
-function Header() {
+function Header({ title }: HeaderProps) {
 	return (
 		<header className={style.header}>
-			<h1>Ferocious Animals Top Trumps</h1>
+			<h1>{title}</h1>
 			<Nav />
 		</header>
 	);

@@ -22,6 +22,7 @@ function Main() {
 							name={card.name}
 							avatar={card.avatar}
 							properties={card.properties}
+							interactive
 						/>
 					);
 				})}

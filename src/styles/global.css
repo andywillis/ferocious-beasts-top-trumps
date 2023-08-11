@@ -5,6 +5,7 @@
 :root {
 	color-scheme: dark light;
 	box-sizing: border-box;
+	scrollbar-gutter: stable;
 
 	.noscript {
 		display: flex;
@@ -24,10 +25,11 @@
 }
 
 body {
-	display: grid;
-	grid-template-areas: "header" "board";
+	display: flex;
+	flex-direction: column;
+	/* grid-template-areas: "header" "main"; */
 	border-left: var(--size-px-05) solid var(--color-green-regular);
-	border-right: var(--size-px-05) solid var(--color-green-regular);
+	/* border-right: var(--size-px-05) solid var(--color-green-regular); */
 	min-height: 100vh;
 	margin: 0;
 	font-size: var(--size-rem-15);
@@ -36,7 +38,7 @@ body {
 @media (min-width: 721px) {
 	body {
 		border-left: var(--size-px-10) solid var(--color-green-regular-faded);
-		border-right: var(--size-px-10) solid var(--color-green-regular-faded);
+		/* border-right: var(--size-px-10) solid var(--color-green-regular-faded); */
 		margin: 0;
     font-size: var(--size-rem-1);
 		overflow-x: hidden;
@@ -55,10 +57,10 @@ body {
 		color: var(--color-red-dark);
 	}
 
-	a:hover {
+	/* a:hover, a.active {
 		cursor: pointer;
 		background-color: var(--color-blue-light);
-	}
+	} */
 
 }
 

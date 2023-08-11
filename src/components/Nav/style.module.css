@@ -3,7 +3,6 @@
 	display: flex;
 	justify-content: center;
 	font-size: var(--size-rem-12);
-	grid-area: nav;
 
 	& ul {
 		width: 100%;
@@ -12,6 +11,12 @@
 
 		& li {
 			display: inline-flex;
+		
+			& a.active {
+				font-weight: var(--font-weight-6);
+				color: var(--color-gray-dark);			
+			}
+			
 		}
 
 	}
