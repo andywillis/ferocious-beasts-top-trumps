@@ -1,0 +1,262 @@
+[
+	{
+		"id": 1,
+		"name": "bear",
+		"avatar": "bear.webp",
+		"properties": [
+			{ "id": 1, "name": "strength", "value": 2 },
+			{ "id": 2, "name": "speed", "value": 2 },
+			{ "id": 3, "name": "stealth", "value": 2 },
+			{ "id": 4, "name": "size", "value": 2 },
+			{ "id": 5, "name": "fluffiness", "value": 2 },
+			{ "id": 6, "name": "aggression", "value": 2 }
+		]
+	},
+	{
+		"id": 2,
+		"name": "eagle",
+		"avatar": "eagle.webp",
+		"properties": [
+			{ "id": 1, "name": "strength", "value": 2 },
+			{ "id": 2, "name": "speed", "value": 2 },
+			{ "id": 3, "name": "stealth", "value": 2 },
+			{ "id": 4, "name": "size", "value": 2 },
+			{ "id": 5, "name": "fluffiness", "value": 2 },
+			{ "id": 6, "name": "aggression", "value": 2 }
+		]
+	},
+	{
+		"id": 3,
+		"name": "cheetah",
+		"avatar": "cheetah.webp",
+		"properties": [
+			{ "id": 1, "name": "strength", "value": 2 },
+			{ "id": 2, "name": "speed", "value": 2 },
+			{ "id": 3, "name": "stealth", "value": 2 },
+			{ "id": 4, "name": "size", "value": 2 },
+			{ "id": 5, "name": "fluffiness", "value": 2 },
+			{ "id": 6, "name": "aggression", "value": 2 }
+		]
+	},
+	{
+		"id": 4,
+		"name": "red panda",
+		"avatar": "redpanda.webp",
+		"properties": [
+			{ "id": 1, "name": "strength", "value": 2 },
+			{ "id": 2, "name": "speed", "value": 2 },
+			{ "id": 3, "name": "stealth", "value": 2 },
+			{ "id": 4, "name": "size", "value": 2 },
+			{ "id": 5, "name": "fluffiness", "value": 2 },
+			{ "id": 6, "name": "aggression", "value": 2 }
+		]
+	},
+	{
+		"id": 5,
+		"name": "red panda",
+		"avatar": "redpanda.webp",
+		"properties": [
+			{ "id": 1, "name": "strength", "value": 2 },
+			{ "id": 2, "name": "speed", "value": 2 },
+			{ "id": 3, "name": "stealth", "value": 2 },
+			{ "id": 4, "name": "size", "value": 2 },
+			{ "id": 5, "name": "fluffiness", "value": 2 },
+			{ "id": 6, "name": "aggression", "value": 2 }
+		]
+	},
+	{
+		"id": 6,
+		"name": "red panda",
+		"avatar": "redpanda.webp",
+		"properties": [
+			{ "id": 1, "name": "strength", "value": 2 },
+			{ "id": 2, "name": "speed", "value": 2 },
+			{ "id": 3, "name": "stealth", "value": 2 },
+			{ "id": 4, "name": "size", "value": 2 },
+			{ "id": 5, "name": "fluffiness", "value": 2 },
+			{ "id": 6, "name": "aggression", "value": 2 }
+		]
+	},
+	{
+		"id": 7,
+		"name": "red panda",
+		"avatar": "redpanda.webp",
+		"properties": [
+			{ "id": 1, "name": "strength", "value": 2 },
+			{ "id": 2, "name": "speed", "value": 2 },
+			{ "id": 3, "name": "stealth", "value": 2 },
+			{ "id": 4, "name": "size", "value": 2 },
+			{ "id": 5, "name": "fluffiness", "value": 2 },
+			{ "id": 6, "name": "aggression", "value": 2 }
+		]
+	},
+	{
+		"id": 8,
+		"name": "red panda",
+		"avatar": "redpanda.webp",
+		"properties": [
+			{ "id": 1, "name": "strength", "value": 2 },
+			{ "id": 2, "name": "speed", "value": 2 },
+			{ "id": 3, "name": "stealth", "value": 2 },
+			{ "id": 4, "name": "size", "value": 2 },
+			{ "id": 5, "name": "fluffiness", "value": 2 },
+			{ "id": 6, "name": "aggression", "value": 2 }
+		]
+	},
+	{
+		"id": 9,
+		"name": "red panda",
+		"avatar": "redpanda.webp",
+		"properties": [
+			{ "id": 1, "name": "strength", "value": 2 },
+			{ "id": 2, "name": "speed", "value": 2 },
+			{ "id": 3, "name": "stealth", "value": 2 },
+			{ "id": 4, "name": "size", "value": 2 },
+			{ "id": 5, "name": "fluffiness", "value": 2 },
+			{ "id": 6, "name": "aggression", "value": 2 }
+		]
+	},
+	{
+		"id": 10,
+		"name": "red panda",
+		"avatar": "redpanda.webp",
+		"properties": [
+			{ "id": 1, "name": "strength", "value": 2 },
+			{ "id": 2, "name": "speed", "value": 2 },
+			{ "id": 3, "name": "stealth", "value": 2 },
+			{ "id": 4, "name": "size", "value": 2 },
+			{ "id": 5, "name": "fluffiness", "value": 2 },
+			{ "id": 6, "name": "aggression", "value": 2 }
+		]
+	},
+	{
+		"id": 11,
+		"name": "red panda",
+		"avatar": "redpanda.webp",
+		"properties": [
+			{ "id": 1, "name": "strength", "value": 2 },
+			{ "id": 2, "name": "speed", "value": 2 },
+			{ "id": 3, "name": "stealth", "value": 2 },
+			{ "id": 4, "name": "size", "value": 2 },
+			{ "id": 5, "name": "fluffiness", "value": 2 },
+			{ "id": 6, "name": "aggression", "value": 2 }
+		]
+	},
+	{
+		"id": 12,
+		"name": "red panda",
+		"avatar": "redpanda.webp",
+		"properties": [
+			{ "id": 1, "name": "strength", "value": 2 },
+			{ "id": 2, "name": "speed", "value": 2 },
+			{ "id": 3, "name": "stealth", "value": 2 },
+			{ "id": 4, "name": "size", "value": 2 },
+			{ "id": 5, "name": "fluffiness", "value": 2 },
+			{ "id": 6, "name": "aggression", "value": 2 }
+		]
+	},
+	{
+		"id": 13,
+		"name": "red panda",
+		"avatar": "redpanda.webp",
+		"properties": [
+			{ "id": 1, "name": "strength", "value": 2 },
+			{ "id": 2, "name": "speed", "value": 2 },
+			{ "id": 3, "name": "stealth", "value": 2 },
+			{ "id": 4, "name": "size", "value": 2 },
+			{ "id": 5, "name": "fluffiness", "value": 2 },
+			{ "id": 6, "name": "aggression", "value": 2 }
+		]
+	},
+	{
+		"id": 14,
+		"name": "red panda",
+		"avatar": "redpanda.webp",
+		"properties": [
+			{ "id": 1, "name": "strength", "value": 2 },
+			{ "id": 2, "name": "speed", "value": 2 },
+			{ "id": 3, "name": "stealth", "value": 2 },
+			{ "id": 4, "name": "size", "value": 2 },
+			{ "id": 5, "name": "fluffiness", "value": 2 },
+			{ "id": 6, "name": "aggression", "value": 2 }
+		]
+	},
+	{
+		"id": 15,
+		"name": "red panda",
+		"avatar": "redpanda.webp",
+		"properties": [
+			{ "id": 1, "name": "strength", "value": 2 },
+			{ "id": 2, "name": "speed", "value": 2 },
+			{ "id": 3, "name": "stealth", "value": 2 },
+			{ "id": 4, "name": "size", "value": 2 },
+			{ "id": 5, "name": "fluffiness", "value": 2 },
+			{ "id": 6, "name": "aggression", "value": 2 }
+		]
+	},
+	{
+		"id": 16,
+		"name": "red panda",
+		"avatar": "redpanda.webp",
+		"properties": [
+			{ "id": 1, "name": "strength", "value": 2 },
+			{ "id": 2, "name": "speed", "value": 2 },
+			{ "id": 3, "name": "stealth", "value": 2 },
+			{ "id": 4, "name": "size", "value": 2 },
+			{ "id": 5, "name": "fluffiness", "value": 2 },
+			{ "id": 6, "name": "aggression", "value": 2 }
+		]
+	},
+	{
+		"id": 17,
+		"name": "red panda",
+		"avatar": "redpanda.webp",
+		"properties": [
+			{ "id": 1, "name": "strength", "value": 2 },
+			{ "id": 2, "name": "speed", "value": 2 },
+			{ "id": 3, "name": "stealth", "value": 2 },
+			{ "id": 4, "name": "size", "value": 2 },
+			{ "id": 5, "name": "fluffiness", "value": 2 },
+			{ "id": 6, "name": "aggression", "value": 2 }
+		]
+	},
+	{
+		"id": 18,
+		"name": "red panda",
+		"avatar": "redpanda.webp",
+		"properties": [
+			{ "id": 1, "name": "strength", "value": 2 },
+			{ "id": 2, "name": "speed", "value": 2 },
+			{ "id": 3, "name": "stealth", "value": 2 },
+			{ "id": 4, "name": "size", "value": 2 },
+			{ "id": 5, "name": "fluffiness", "value": 2 },
+			{ "id": 6, "name": "aggression", "value": 2 }
+		]
+	},
+	{
+		"id": 19,
+		"name": "red panda",
+		"avatar": "redpanda.webp",
+		"properties": [
+			{ "id": 1, "name": "strength", "value": 2 },
+			{ "id": 2, "name": "speed", "value": 2 },
+			{ "id": 3, "name": "stealth", "value": 2 },
+			{ "id": 4, "name": "size", "value": 2 },
+			{ "id": 5, "name": "fluffiness", "value": 2 },
+			{ "id": 6, "name": "aggression", "value": 2 }
+		]
+	},
+	{
+		"id": 20,
+		"name": "red panda",
+		"avatar": "redpanda.webp",
+		"properties": [
+			{ "id": 1, "name": "strength", "value": 2 },
+			{ "id": 2, "name": "speed", "value": 2 },
+			{ "id": 3, "name": "stealth", "value": 2 },
+			{ "id": 4, "name": "size", "value": 2 },
+			{ "id": 5, "name": "fluffiness", "value": 2 },
+			{ "id": 6, "name": "aggression", "value": 2 }
+		]
+	}
+]

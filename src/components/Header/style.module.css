@@ -1,0 +1,12 @@
+.header {
+	display: flex;
+	justify-content: center;
+	font-size: var(--size-rem-08);
+	grid-area: header;
+}
+
+@media (min-width: 721px) {
+	.header {
+		font-size: var(--size-rem-1);
+	}
+}

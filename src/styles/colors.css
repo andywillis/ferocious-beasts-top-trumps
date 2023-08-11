@@ -1,0 +1,33 @@
+@import 'open-props/blue-hsl.min.css';
+@import 'open-props/gray-hsl.min.css';
+@import 'open-props/red-hsl.min.css';
+@import 'open-props/green-hsl.min.css';
+@import 'open-props/sand-hsl.min.css';
+
+:root {
+	
+	--color-red-dark: hsl(var(--red-9-hsl));
+	--color-red-light: hsl(var(--red-9-hsl) / 70%);
+	
+	--color-sand-light-20: hsl(var(--sand-2-hsl) / 20%);
+	--color-sand-light-40: hsl(var(--sand-2-hsl) / 40%);
+	--color-sand-light-60: hsl(var(--sand-2-hsl) / 60%);
+	--color-sand-regular: hsl(var(--sand-9-hsl));
+
+	--color-blue-light: hsl(var(--blue-1-hsl));
+	--color-blue-dark: hsl(var(--blue-8-hsl));
+
+	--color-gray-dark: hsl(var(--gray-8-hsl));
+	--color-gray-regular: hsl(var(--gray-3-hsl));
+	--color-gray-light: hsl(var(--gray-1-hsl));
+	--color-gray-light-50: hsl(var(--gray-1-hsl) / 50%);
+
+	--color-green-light-20: hsl(var(--green-2-hsl) / 20%);
+	--color-green-light-40: hsl(var(--green-2-hsl) / 40%);
+	--color-green-light-60: hsl(var(--green-2-hsl) / 60%);
+	--color-green-light-70: hsl(var(--green-2-hsl) / 60%);
+	--color-green-regular: hsl(var(--green-5-hsl));
+	--color-green-regular-faded: hsl(var(--green-5-hsl) / 60%);
+	--color-green-dark: hsl(var(--green-9-hsl));
+
+}

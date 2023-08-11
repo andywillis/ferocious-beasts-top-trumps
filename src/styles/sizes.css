@@ -1,0 +1,44 @@
+:root {
+
+	--size-rem--15: -1.5rem;
+
+	--size-rem-01: 0.1rem;
+	--size-rem-025: 0.25rem;
+	--size-rem-05: 0.5rem;
+	--size-rem-075: 0.75rem;
+	--size-rem-08: 0.8rem;
+	--size-rem-09: 0.9rem;
+	--size-rem-1: 1rem;
+	--size-rem-11: 1.1rem;
+	--size-rem-12: 1.2rem;
+	--size-rem-13: 1.3rem;
+	--size-rem-14: 1.4rem;
+	--size-rem-15: 1.5rem;
+	--size-rem-16: 1.6rem;
+	--size-rem-18: 1.8rem;
+	--size-rem-2: 2rem;
+	--size-rem-21: 2.1rem;
+	--size-rem-22: 2.2rem;
+	--size-rem-23: 2.3rem;
+	--size-rem-23: 2.4rem;
+	--size-rem-25: 2.5rem;
+	--size-rem-26: 2.6rem;
+	--size-rem-27: 2.7rem;
+	--size-rem-28: 2.8rem;
+	--size-rem-29: 2.9rem;
+	--size-rem-3: 3rem;
+	--size-rem-4: 4rem;
+	--size-rem-6: 6rem;
+
+  /* px */
+
+	--size-px-01: 1px;
+	--size-px-02: 2px;
+	--size-px-05: 5px;
+	--size-px-075: 7.5px;
+	--size-px-10: 10px;
+	--size-px-16: 16px;
+	--size-px-32: 32px;
+	--size-px-36: 36px;
+
+}
