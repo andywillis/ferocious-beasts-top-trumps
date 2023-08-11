@@ -1,12 +1,22 @@
 .header {
+	width: 100%;
 	display: flex;
-	justify-content: center;
-	font-size: var(--size-rem-08);
+	padding-bottom: var(--size-rem-1);
+	align-items: center;
+	flex-direction: column;
+	font-size: var(--size-rem-09);
 	grid-area: header;
+	border-bottom: var(--size-px-01) solid var(--color-blue-dark);
 }
 
 @media (min-width: 721px) {
 	.header {
 		font-size: var(--size-rem-1);
+		padding-bottom: var(--size-rem-1);
+
+		& h1 {
+			margin-bottom: var(--size-rem-05);
+		}
+
 	}
 }

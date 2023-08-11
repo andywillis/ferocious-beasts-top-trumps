@@ -1,4 +1,5 @@
 import style from './style.module.css';
+import Nav from '../Nav';
 
 /**
  * Header
@@ -8,6 +9,7 @@ function Header() {
 	return (
 		<header className={style.header}>
 			<h1>Ferocious Animals Top Trumps</h1>
+			<Nav />
 		</header>
 	);
 }

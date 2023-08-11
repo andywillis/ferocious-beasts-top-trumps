@@ -1,6 +1,6 @@
 import style from './style.module.css';
 
-import { AnimalType, PropertyType } from '../../types';
+import { CardType, PropertyType } from '../../types';
 
 /**
  * Card
@@ -8,23 +8,43 @@ import { AnimalType, PropertyType } from '../../types';
  * @param {CardType} { name, avatar, properties }
  * @return {React.Element} Card component
  */
-function Card({ name, avatar, properties }: AnimalType) {
+function Card({ name, avatar, properties, interactive = false }: CardType) {
+	
+	const cn = [
+		style.card,
+		interactive && style.cardinteractive
+	].join(' ');
+	
 	return (
-		<section className={style.card}>
-			<header className={style.name}>{name}</header>
-			<div className={style.avatar}>{avatar}</div>
-			<footer className={style.properties}>
+		<section className={cn}>
+
+			<header className={style.name}>
+				<h2>{name}</h2>
+			</header>
+
+			<img className={style.avatar} src={avatar} alt={name} />
+
+			<ul className={style.properties}>
 				{properties.map((property: PropertyType) => {
+					
+					const cn = [
+						style.property,
+						interactive && style.propinteractive
+					].join(' ');
+					
 					return (
-						<div key={property.id} className={style.property}>
+						<li key={property.id} className={cn}>
 							<span>{property.name}</span>
 							<span>{property.value}</span>
-						</div>
+						</li>
 					);
+
 				})}
-			</footer>
+			</ul>
+
 		</section>
 	);
+
 }
 
 export default Card;

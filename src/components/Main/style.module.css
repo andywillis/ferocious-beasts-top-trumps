@@ -3,7 +3,7 @@
 	display: grid;
 	justify-items: center;
 	margin: var(--size-rem-1);
-	padding: var(--size-rem-1);
+	padding: var(--size-rem-2) var(--size-rem-1);
 	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 	gap: var(--size-rem-3);
 }
@@ -11,6 +11,6 @@
 @media (min-width: 721px) {
 	.board {
 		margin: var(--size-rem-1) var(--size-rem-4);
-		padding: var(--size-rem-1);
+		padding: var(--size-rem-2) var(--size-rem-1);
 	}
 }
