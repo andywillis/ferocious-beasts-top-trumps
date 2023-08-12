@@ -51,8 +51,8 @@
 		"id": 4,
 		"name": "red panda",
 		"image": {
-			"name": "cheetah.webp",
-			"alt": "Photo of a cheetah"
+			"name": "red-panda.webp",
+			"alt": "Photo of a Red Panda"
 		},
 		"properties": [
 			{ "id": 1, "name": "strength", "value": 2 },
@@ -67,8 +67,8 @@
 		"id": 5,
 		"name": "spider",
 		"image": {
-			"name": "cheetah.webp",
-			"alt": "Photo of a cheetah"
+			"name": "spider.webp",
+			"alt": "Extreme close-up photo of a Jumping Spider"
 		},
 		"properties": [
 			{ "id": 1, "name": "strength", "value": 2 },
@@ -83,8 +83,8 @@
 		"id": 6,
 		"name": "shark",
 		"image": {
-			"name": "cheetah.webp",
-			"alt": "Photo of a cheetah"
+			"name": "shark.webp",
+			"alt": "Photo of a Great White Shark"
 		},
 		"properties": [
 			{ "id": 1, "name": "strength", "value": 2 },
@@ -99,8 +99,8 @@
 		"id": 7,
 		"name": "praying mantis",
 		"image": {
-			"name": "cheetah.webp",
-			"alt": "Photo of a cheetah"
+			"name": "praying-mantis.webp",
+			"alt": "Photo of a Praying Mantis"
 		},
 		"properties": [
 			{ "id": 1, "name": "strength", "value": 2 },
@@ -115,8 +115,8 @@
 		"id": 8,
 		"name": "polar bear",
 		"image": {
-			"name": "cheetah.webp",
-			"alt": "Photo of a cheetah"
+			"name": "polar-bear.webp",
+			"alt": "Photo of a Polar Bear"
 		},
 		"properties": [
 			{ "id": 1, "name": "strength", "value": 2 },
@@ -131,8 +131,8 @@
 		"id": 9,
 		"name": "fox",
 		"image": {
-			"name": "cheetah.webp",
-			"alt": "Photo of a cheetah"
+			"name": "fox.webp",
+			"alt": "Photo of a fox"
 		},
 		"properties": [
 			{ "id": 1, "name": "strength", "value": 2 },
@@ -147,8 +147,8 @@
 		"id": 10,
 		"name": "hippopotamus",
 		"image": {
-			"name": "cheetah.webp",
-			"alt": "Photo of a cheetah"
+			"name": "hippopotamus.webp",
+			"alt": "Photo of a hippopotamus"
 		},
 		"properties": [
 			{ "id": 1, "name": "strength", "value": 2 },
@@ -163,8 +163,8 @@
 		"id": 11,
 		"name": "snake",
 		"image": {
-			"name": "cheetah.webp",
-			"alt": "Photo of a cheetah"
+			"name": "white-lipped-island-pit-viper.webp",
+			"alt": "Photo of a White-Lipped Island Pit Viper"
 		},
 		"properties": [
 			{ "id": 1, "name": "strength", "value": 2 },
@@ -179,8 +179,8 @@
 		"id": 12,
 		"name": "owl",
 		"image": {
-			"name": "cheetah.webp",
-			"alt": "Photo of a cheetah"
+			"name": "owl.webp",
+			"alt": "Photo of a White Owl"
 		},
 		"properties": [
 			{ "id": 1, "name": "strength", "value": 2 },
@@ -195,8 +195,8 @@
 		"id": 13,
 		"name": "scorpion",
 		"image": {
-			"name": "cheetah.webp",
-			"alt": "Photo of a cheetah"
+			"name": "scorpion.webp",
+			"alt": "Photo of a scorpion"
 		},
 		"properties": [
 			{ "id": 1, "name": "strength", "value": 2 },
@@ -211,8 +211,8 @@
 		"id": 14,
 		"name": "sloth",
 		"image": {
-			"name": "cheetah.webp",
-			"alt": "Photo of a cheetah"
+			"name": "sloth.webp",
+			"alt": "Photo of a happy sloth"
 		},
 		"properties": [
 			{ "id": 1, "name": "strength", "value": 2 },
@@ -227,8 +227,8 @@
 		"id": 15,
 		"name": "koala",
 		"image": {
-			"name": "cheetah.webp",
-			"alt": "Photo of a cheetah"
+			"name": "koala.webp",
+			"alt": "Photo of a koala"
 		},
 		"properties": [
 			{ "id": 1, "name": "strength", "value": 2 },
@@ -243,8 +243,8 @@
 		"id": 16,
 		"name": "pirahna",
 		"image": {
-			"name": "cheetah.webp",
-			"alt": "Photo of a cheetah"
+			"name": "pirahna.webp",
+			"alt": "Photo of a pirahna"
 		},
 		"properties": [
 			{ "id": 1, "name": "strength", "value": 2 },
@@ -259,8 +259,8 @@
 		"id": 17,
 		"name": "parrot",
 		"image": {
-			"name": "cheetah.webp",
-			"alt": "Photo of a cheetah"
+			"name": "parrot.webp",
+			"alt": "Photo of a parrot"
 		},
 		"properties": [
 			{ "id": 1, "name": "strength", "value": 2 },
@@ -275,8 +275,8 @@
 		"id": 18,
 		"name": "crocodile",
 		"image": {
-			"name": "cheetah.webp",
-			"alt": "Photo of a cheetah"
+			"name": "crocodile.webp",
+			"alt": "Photo of a crocodile"
 		},
 		"properties": [
 			{ "id": 1, "name": "strength", "value": 2 },
@@ -291,8 +291,8 @@
 		"id": 19,
 		"name": "lion",
 		"image": {
-			"name": "cheetah.webp",
-			"alt": "Photo of a cheetah"
+			"name": "lion.webp",
+			"alt": "Photo of a lion yawning"
 		},
 		"properties": [
 			{ "id": 1, "name": "strength", "value": 2 },
@@ -307,8 +307,8 @@
 		"id": 20,
 		"name": "kangaroo",
 		"image": {
-			"name": "cheetah.webp",
-			"alt": "Photo of a cheetah"
+			"name": "kangaroo.webp",
+			"alt": "Photo of a kangaroo"
 		},
 		"properties": [
 			{ "id": 1, "name": "strength", "value": 2 },
@@ -321,10 +321,10 @@
 	},
 	{
 		"id": 21,
-		"name": "coypu",
+		"name": "capybara",
 		"image": {
-			"name": "cheetah.webp",
-			"alt": "Photo of a cheetah"
+			"name": "capybara.webp",
+			"alt": "Photo of a capybara soaking in a pond with a citrus fruit on its head"
 		},
 		"properties": [
 			{ "id": 1, "name": "strength", "value": 2 },
@@ -339,8 +339,8 @@
 		"id": 22,
 		"name": "zebra",
 		"image": {
-			"name": "cheetah.webp",
-			"alt": "Photo of a cheetah"
+			"name": "zebra.webp",
+			"alt": "Photo of a zebra"
 		},
 		"properties": [
 			{ "id": 1, "name": "strength", "value": 2 },
@@ -355,8 +355,8 @@
 		"id": 23,
 		"name": "elephant",
 		"image": {
-			"name": "cheetah.webp",
-			"alt": "Photo of a cheetah"
+			"name": "elephant.webp",
+			"alt": "Photo of a elephant"
 		},
 		"properties": [
 			{ "id": 1, "name": "strength", "value": 2 },
@@ -371,8 +371,8 @@
 		"id": 24,
 		"name": "chimpanzee",
 		"image": {
-			"name": "cheetah.webp",
-			"alt": "Photo of a cheetah"
+			"name": "chimpanzee.webp",
+			"alt": "Photo of a chimpanzee"
 		},
 		"properties": [
 			{ "id": 1, "name": "strength", "value": 2 },
@@ -387,8 +387,8 @@
 		"id": 25,
 		"name": "chicken",
 		"image": {
-			"name": "cheetah.webp",
-			"alt": "Photo of a cheetah"
+			"name": "chicken.webp",
+			"alt": "Photo of a chicken prancing"
 		},
 		"properties": [
 			{ "id": 1, "name": "strength", "value": 2 },
@@ -401,10 +401,10 @@
 	},
 	{
 		"id": 26,
-		"name": "cat",
+		"name": "domestic cat",
 		"image": {
-			"name": "cheetah.webp",
-			"alt": "Photo of a cheetah"
+			"name": "domestic-cat.webp",
+			"alt": "Photo of a adorable kitten"
 		},
 		"properties": [
 			{ "id": 1, "name": "strength", "value": 2 },
@@ -419,8 +419,8 @@
 		"id": 27,
 		"name": "otter",
 		"image": {
-			"name": "cheetah.webp",
-			"alt": "Photo of a cheetah"
+			"name": "otter.webp",
+			"alt": "Photo of a otter"
 		},
 		"properties": [
 			{ "id": 1, "name": "strength", "value": 2 },
@@ -435,8 +435,8 @@
 		"id": 28,
 		"name": "quokka",
 		"image": {
-			"name": "cheetah.webp",
-			"alt": "Photo of a cheetah"
+			"name": "quokka.webp",
+			"alt": "Photo of a happy quokka"
 		},
 		"properties": [
 			{ "id": 1, "name": "strength", "value": 2 },
@@ -449,10 +449,10 @@
 	},
 	{
 		"id": 29,
-		"name": "fennic fox",
+		"name": "fennec fox",
 		"image": {
-			"name": "cheetah.webp",
-			"alt": "Photo of a cheetah"
+			"name": "fennec-fox.webp",
+			"alt": "Photo of a Fennec Fox"
 		},
 		"properties": [
 			{ "id": 1, "name": "strength", "value": 2 },
@@ -465,10 +465,10 @@
 	},
 	{
 		"id": 30,
-		"name": "llama",
+		"name": "bison",
 		"image": {
-			"name": "cheetah.webp",
-			"alt": "Photo of a cheetah"
+			"name": "bison.webp",
+			"alt": "Photo of a bison"
 		},
 		"properties": [
 			{ "id": 1, "name": "strength", "value": 2 },
@@ -483,8 +483,8 @@
 		"id": 31,
 		"name": "yak",
 		"image": {
-			"name": "cheetah.webp",
-			"alt": "Photo of a cheetah"
+			"name": "yak.webp",
+			"alt": "Photo of a yak"
 		},
 		"properties": [
 			{ "id": 1, "name": "strength", "value": 2 },
@@ -499,8 +499,8 @@
 		"id": 32,
 		"name": "margay",
 		"image": {
-			"name": "cheetah.webp",
-			"alt": "Photo of a cheetah"
+			"name": "margay.webp",
+			"alt": "Photo of a margay"
 		},
 		"properties": [
 			{ "id": 1, "name": "strength", "value": 2 },
@@ -515,8 +515,8 @@
 		"id": 33,
 		"name": "elephant shrew",
 		"image": {
-			"name": "cheetah.webp",
-			"alt": "Photo of a cheetah"
+			"name": "elephant-shrew.webp",
+			"alt": "Photo of an Elephant Shrew"
 		},
 		"properties": [
 			{ "id": 1, "name": "strength", "value": 2 },
@@ -531,8 +531,8 @@
 		"id": 34,
 		"name": "pallas cat",
 		"image": {
-			"name": "cheetah.webp",
-			"alt": "Photo of a cheetah"
+			"name": "pallas-cat.webp",
+			"alt": "Photo of a Pallas Cat"
 		},
 		"properties": [
 			{ "id": 1, "name": "strength", "value": 2 },
@@ -547,8 +547,8 @@
 		"id": 35,
 		"name": "crow",
 		"image": {
-			"name": "cheetah.webp",
-			"alt": "Photo of a cheetah"
+			"name": "crow.webp",
+			"alt": "Photo of a crow"
 		},
 		"properties": [
 			{ "id": 1, "name": "strength", "value": 2 },
@@ -561,10 +561,10 @@
 	},
 	{
 		"id": 36,
-		"name": "t-rex",
+		"name": "panda",
 		"image": {
-			"name": "cheetah.webp",
-			"alt": "Photo of a cheetah"
+			"name": "panda.webp",
+			"alt": "Photo of a panda"
 		},
 		"properties": [
 			{ "id": 1, "name": "strength", "value": 2 },
@@ -579,8 +579,8 @@
 		"id": 37,
 		"name": "honey badger",
 		"image": {
-			"name": "cheetah.webp",
-			"alt": "Photo of a cheetah"
+			"name": "honey-badger.webp",
+			"alt": "Photo of a Honey Badger"
 		},
 		"properties": [
 			{ "id": 1, "name": "strength", "value": 2 },
@@ -595,7 +595,7 @@
 		"id": 38,
 		"name": "chameleon",
 		"image": {
-			"name": "cheetah.webp",
+			"name": "chameleon.webp",
 			"alt": "Photo of a cheetah"
 		},
 		"properties": [
@@ -611,8 +611,8 @@
 		"id": 39,
 		"name": "ostrich",
 		"image": {
-			"name": "cheetah.webp",
-			"alt": "Photo of a cheetah"
+			"name": "ostrich.webp",
+			"alt": "Photo of a ostrich"
 		},
 		"properties": [
 			{ "id": 1, "name": "strength", "value": 2 },
