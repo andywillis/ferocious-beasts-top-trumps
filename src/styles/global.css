@@ -50,9 +50,9 @@ body {
 	color: var(--color-sand-regular);
 
 	:not(h1) > a,
-	:not(h1) > a:not(h1):link,
-	:not(h1) > a:not(h1):visited,
-	:not(h1) > a:not(h1):active {
+	:not(h1) > a:link,
+	:not(h1) > a:visited,
+	:not(h1):not(nav li) > a:active {
 		text-decoration: underline;
 		color: var(--color-red-dark);
 	}

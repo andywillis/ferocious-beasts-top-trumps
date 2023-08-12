@@ -3,7 +3,7 @@
 	display: flex;
 	align-items: center;
 	flex-direction: column;
-	font-size: var(--size-rem-09);
+	font-size: var(--size-rem-1);
 	grid-area: header;
 	padding-bottom: var(--size-rem-2);
 	border-bottom: var(--size-px-01) solid var(--color-blue-dark);

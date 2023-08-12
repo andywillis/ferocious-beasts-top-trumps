@@ -1,8 +1,8 @@
 .nav {
-	width: 70%;
+	width: 80%;
 	display: flex;
 	justify-content: center;
-	font-size: var(--size-rem-12);
+	font-size: var(--size-rem-13);
 
 	& ul {
 		width: 100%;
@@ -14,7 +14,7 @@
 		
 			& a.active {
 				font-weight: var(--font-weight-6);
-				color: var(--color-gray-dark);			
+				color: var(--color-gray-dark);	
 			}
 			
 		}

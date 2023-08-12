@@ -1,10 +1,11 @@
+import { useState } from 'react';
+
 import style from './style.module.css';
 
 interface CardImageProps {
 	src: string;
 	alt: string;
 	count: number;
-	handleImageLoad: () => void;
 }
 
 /**
@@ -13,12 +14,24 @@ interface CardImageProps {
  * @param {CardImageProps} { src, alt, handleImageLoad }
  * @return {React.Element} CardImage component
  */
-function CardImage({ src, alt, handleImageLoad, count }: CardImageProps) {
+function CardImage({ src, alt, count }: CardImageProps) {
+	
+	const [ isImageLoaded, setIsImageLoaded ] = useState(false);
+
+	function handleImageLoad() {
+		setIsImageLoaded(true);
+	}
+	
+	const cn = [
+		style.cardImage,
+		!isImageLoaded && style.hidden
+	].join(' ');
+
 	return (
 		<img
 			width="250"
 			height="125"
-			className={style.cardImage}
+			className={cn}
 			loading={count > 10 ? 'lazy' : 'eager'}
 			src={src}
 			alt={alt}

@@ -6,7 +6,7 @@ import App from './layouts/App';
 
 import './styles/global.css';
 
-ReactDOM.createRoot(document.querySelector('body')!).render(
+ReactDOM.createRoot(document.querySelector('#root')!).render(
 	<React.StrictMode>
 		<BrowserRouter>
 			<App />

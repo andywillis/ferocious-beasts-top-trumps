@@ -14,27 +14,6 @@
 	font-stretch: 25% 151%;
 }
 
-/* @font-face {
-  font-family: Main;
-  font-style: normal;
-  font-weight: 400;
-  src: url('/assets/fonts/Lexend-Regular.woff2') format('woff2');
-}
-
-@font-face {
-  font-family: Main;
-  font-style: normal;
-  font-weight: 600;
-  src: url('/assets/fonts/Lexend-SemiBold.woff2') format('woff2');
-}
-
-@font-face {
-  font-family: Main;
-  font-style: normal;
-  font-weight: 800;
-  src: url('/assets/fonts/Lexend-ExtraBold.woff2') format('woff2');
-} */
-
 :root {
 
 	font-family: Main, sans-serif;

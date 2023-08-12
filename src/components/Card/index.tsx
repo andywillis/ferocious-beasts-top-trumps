@@ -1,5 +1,3 @@
-import { useState } from 'react';
-
 import { CardType } from '../../types';
 
 import CardImage from './CardImage';
@@ -23,15 +21,8 @@ function Card(props: CardType) {
 		count
 	} = props;
 
-	const [ isImageLoaded, setIsImageLoaded ] = useState(false);
-
-	function handleImageLoad() {
-		setIsImageLoaded(true);
-	}
-
 	const cn = [
 		style.card,
-		!isImageLoaded && style.hidden,
 		interactive && style.interactive
 	].join(' ');
 	
@@ -46,7 +37,6 @@ function Card(props: CardType) {
 				src={`assets/images/${image.name}`}
 				alt={image.alt}
 				count={count}
-				handleImageLoad={handleImageLoad}
 			/>
 
 			<CardProperties

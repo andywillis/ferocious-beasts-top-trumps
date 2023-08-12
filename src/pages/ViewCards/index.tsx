@@ -2,9 +2,9 @@ import Card from '../../components/Card';
 
 import { AnimalType } from '../../types';
 
-import style from './style.module.css';
-
 import { sortedAnimals } from '../../store';
+
+import style from './style.module.css';
 
 /**
  * ViewCards
