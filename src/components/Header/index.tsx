@@ -1,5 +1,8 @@
-import style from './style.module.css';
+import { Link } from 'react-router-dom';
+
 import Nav from '../Nav';
+
+import style from './style.module.css';
 
 interface HeaderProps {
 	title: string;
@@ -12,7 +15,7 @@ interface HeaderProps {
 function Header({ title }: HeaderProps) {
 	return (
 		<header className={style.header}>
-			<h1>{title}</h1>
+			<h1><Link to="/">{title}</Link></h1>
 			<Nav />
 		</header>
 	);

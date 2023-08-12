@@ -49,18 +49,13 @@ body {
 	background-color: var(--color-sand-light-40);
 	color: var(--color-sand-regular);
 
-	a,
-	a:link,
-	a:visited,
-	a:active {
+	:not(h1) > a,
+	:not(h1) > a:not(h1):link,
+	:not(h1) > a:not(h1):visited,
+	:not(h1) > a:not(h1):active {
 		text-decoration: underline;
 		color: var(--color-red-dark);
 	}
-
-	/* a:hover, a.active {
-		cursor: pointer;
-		background-color: var(--color-blue-light);
-	} */
 
 }
 

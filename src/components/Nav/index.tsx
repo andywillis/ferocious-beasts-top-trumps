@@ -21,6 +21,13 @@ function Nav() {
 	return (
 		<nav className={style.nav}>
 			<ul>
+				{/* <li>
+					<NavLink
+						to="/"
+						className={(props) => checkNavItemStatus(props)}
+					>Home
+					</NavLink>
+				</li> */}
 				<li>
 					<NavLink
 						to="/playgame"

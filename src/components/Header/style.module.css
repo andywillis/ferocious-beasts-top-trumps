@@ -7,6 +7,14 @@
 	grid-area: header;
 	padding-bottom: var(--size-rem-2);
 	border-bottom: var(--size-px-01) solid var(--color-blue-dark);
+
+	& h1 {
+		& a {
+			color: var(--color-gray-dark);
+			text-decoration: none;
+		}
+	}
+
 }
 
 @media (min-width: 1121px) {
