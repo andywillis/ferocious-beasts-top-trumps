@@ -1,9 +1,9 @@
-.card {
-	display: flex;
+.container {
+	perspective: 150rem;
+	/* position: relative; */
 	min-height: 100%;
-	width: 250px;
+	max-width: 250px;
 	height: fit-content;
-	flex-direction: column;
 	border: var(--size-px-01) solid var(--color-gray-dark);
 	padding: var(--size-rem-025);
 	border-radius: var(--size-px-05);
@@ -13,6 +13,28 @@
 	&.hidden {
 		visibility: hidden;
 	}
+
+}
+
+.cardSide {
+  /* height: fit-content; */
+  /* border-radius: 15px; */
+  transition: all 0.8s ease;
+  backface-visibility: hidden;
+  /* position: absolute; */
+  /* top: 0;
+  left: 0; */
+  /* width: 80%; */
+  /* padding: 2rem; */
+  /* color: white; */
+}
+
+.cardFront {
+	display: flex;
+	/* min-height: 100%;
+	max-width: 250px; */
+	/* height: fit-content; */
+	flex-direction: column;
 	
 	&.interactive {
 		&:hover {
@@ -45,10 +67,10 @@
 }
 
 @media (min-width: 721px) {
-	.card {
+	.cardFront {
 		& .name {
 			& h2 {
-				font-size: var(--size-rem-11);
+				font-size: var(--size-rem-12);
 			}	
 		}
 	}

@@ -29,30 +29,38 @@ function Card(props: CardType) {
 		setIsImageLoaded(true);
 	}
 
-	const cn = [
-		style.card,
-		!isImageLoaded && style.hidden,
+	const cnContainer = [
+		style.container,
+		!isImageLoaded && style.hidden
+	].join(' ');
+
+	const cnCard = [
+		style.cardSide,
+		style.cardFront,
 		interactive && style.interactive
 	].join(' ');
-	
+
 	return (
-		<section className={cn}>
+		<section className={cnContainer}>
+			<section className={cnCard}>
 
-			<header className={style.name}>
-				<h2>{name}</h2>
-			</header>
+				<header className={style.name}>
+					<h2>{name}</h2>
+				</header>
 
-			<CardImage
-				src={`assets/images/${image.name}`}
-				alt={image.alt}
-				count={count}
-				handleImageLoad={handleImageLoad}
-			/>
+				<CardImage
+					src={`assets/images/${image.name}`}
+					alt={image.alt}
+					count={count}
+					handleImageLoad={handleImageLoad}
+				/>
 
-			<CardProperties
-				properties={properties}
-				interactive={interactive}
-			/>
+				<CardProperties
+					properties={properties}
+					interactive={interactive}
+				/>
+
+			</section>
 
 		</section>
 	);
