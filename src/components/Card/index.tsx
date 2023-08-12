@@ -13,8 +13,16 @@ import style from './style.module.css';
  * @param {CardType} { name, avatar, properties }
  * @return {React.Element} Card component
  */
-function Card({ name, image, properties, interactive = false }: CardType) {
+function Card(props: CardType) {
 	
+	const {
+		name,
+		image,
+		properties,
+		interactive = false,
+		count
+	} = props;
+
 	const [ isImageLoaded, setIsImageLoaded ] = useState(false);
 
 	function handleImageLoad() {
@@ -37,12 +45,13 @@ function Card({ name, image, properties, interactive = false }: CardType) {
 			<CardImage
 				src={`assets/images/${image.name}`}
 				alt={image.alt}
+				count={count}
 				handleImageLoad={handleImageLoad}
 			/>
 
 			<CardProperties
 				properties={properties}
-				interactive
+				interactive={interactive}
 			/>
 
 		</section>

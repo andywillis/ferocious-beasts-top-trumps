@@ -21,6 +21,9 @@
 	--color-gray-regular: hsl(var(--gray-3-hsl));
 	--color-gray-light: hsl(var(--gray-1-hsl));
 	--color-gray-light-50: hsl(var(--gray-1-hsl) / 50%);
+	--color-gray-light-60: hsl(var(--gray-1-hsl) / 60%);
+	--color-gray-light-70: hsl(var(--gray-1-hsl) / 70%);
+	--color-gray-light-80: hsl(var(--gray-1-hsl) / 80%);
 
 	--color-green-light-20: hsl(var(--green-2-hsl) / 20%);
 	--color-green-light-40: hsl(var(--green-2-hsl) / 40%);

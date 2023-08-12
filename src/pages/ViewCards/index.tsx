@@ -13,7 +13,7 @@ import { sortedAnimals } from '../../store';
 function ViewCards() {
 	return (
 		<main className={style.main}>
-			{sortedAnimals.value.map((card: AnimalType) => {
+			{sortedAnimals.value.map((card: AnimalType, index: number) => {
 				return (
 					<Card
 						key={card.id}
@@ -21,7 +21,8 @@ function ViewCards() {
 						name={card.name}
 						image={card.image}
 						properties={card.properties}
-						interactive
+						interactive={false}
+						count={index}
 					/>
 				);
 			})}

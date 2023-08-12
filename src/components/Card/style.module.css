@@ -7,7 +7,7 @@
 	border: var(--size-px-01) solid var(--color-gray-dark);
 	padding: var(--size-rem-025);
 	border-radius: var(--size-px-05);
-	background-color: var(--color-gray-light-50);
+	background-color: var(--color-gray-light-70);
   animation: fadein 1s;
 
 	&.hidden {
