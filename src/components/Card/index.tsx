@@ -31,13 +31,13 @@ function Card(props: CardType) {
 
 	const cnContainer = [
 		style.container,
-		!isImageLoaded && style.hidden
+		!isImageLoaded ? style.hidden : ''
 	].join(' ');
 
 	const cnCard = [
 		style.cardSide,
 		style.cardFront,
-		interactive && style.interactive
+		interactive ? style.interactive : ''
 	].join(' ');
 
 	return (
@@ -60,6 +60,10 @@ function Card(props: CardType) {
 					interactive={interactive}
 				/>
 
+			</section>
+
+			<section className={[ style.cardSide, style.cardBack ].join(' ')}>
+				Back
 			</section>
 
 		</section>
