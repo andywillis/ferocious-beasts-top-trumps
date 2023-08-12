@@ -7,7 +7,7 @@ interface CardPropertiesProps {
 	interactive: boolean;
 }
 
-function sortPropertybyName(a: PropertyType, b: PropertyType) {
+function sortPropertiesbyName(a: PropertyType, b: PropertyType) {
 	return a.name.localeCompare(b.name);
 }
 
@@ -20,7 +20,7 @@ function sortPropertybyName(a: PropertyType, b: PropertyType) {
 function CardProperties({ properties, interactive }: CardPropertiesProps) {
 	return (
 		<ul className={style.properties}>
-			{properties.sort(sortPropertybyName).map((property: PropertyType) => {
+			{properties.sort(sortPropertiesbyName).map((property: PropertyType) => {
 				
 				const cn = [
 					style.property,

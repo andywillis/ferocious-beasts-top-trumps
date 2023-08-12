@@ -4,7 +4,7 @@ import { AnimalType } from '../../types';
 
 import style from './style.module.css';
 
-import { animals } from '../../store';
+import { sortedAnimals } from '../../store';
 
 /**
  * ViewCards
@@ -13,7 +13,7 @@ import { animals } from '../../store';
 function ViewCards() {
 	return (
 		<main className={style.main}>
-			{animals.value.map((card: AnimalType) => {
+			{sortedAnimals.value.map((card: AnimalType) => {
 				return (
 					<Card
 						key={card.id}
