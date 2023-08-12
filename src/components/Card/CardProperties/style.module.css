@@ -1,0 +1,32 @@
+.properties {
+	flex-shrink: 0;
+	font-size: var(--size-rem-13);
+	text-transform: capitalize;
+	border: var(--size-px-01) solid var(--color-gray-light);
+
+	& .property ~ .property {
+		border-top: var(--size-px-01) solid var(--color-green-dark);
+	}
+
+	& .property {
+		display: flex;
+
+		& span:nth-child(2) {
+			margin-left: auto;
+		}
+	
+	}
+
+	& .interactive {
+		&:hover {
+			background-color: var(--color-blue-light);
+		}
+	}
+
+}
+
+@media (min-width: 721px) {
+	.properties {
+		font-size: var(--size-rem-09);
+	}
+}

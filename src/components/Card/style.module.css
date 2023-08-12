@@ -2,14 +2,19 @@
 	display: flex;
 	min-height: 100%;
 	width: 250px;
-	height: 350px;
+	height: fit-content;
 	flex-direction: column;
 	border: var(--size-px-01) solid var(--color-gray-dark);
 	padding: var(--size-rem-025);
 	border-radius: var(--size-px-05);
 	background-color: var(--color-gray-light-50);
+  animation: fadein 1s;
 
-	&.cardinteractive {
+	&.hidden {
+		visibility: hidden;
+	}
+	
+	&.interactive {
 		&:hover {
 			cursor: pointer;
 			box-shadow:
@@ -18,65 +23,33 @@
 				var(--color-green-light-40);
 		}	
 	}
-	
+
 	& .name {
-		text-transform: capitalize;
+		text-transform: uppercase;
 		text-align: center;
 
 		& h2 {
 			padding: 0;
 			margin: 0;
-			font-weight: 400;
-			font-size: var(--size-rem-12);
-		}
-
-	}
-
-	& .avatar {
-		flex-grow: 1;
-	}
-
-	& .properties {
-		flex-shrink: 0;
-		font-size: var(--size-rem-13);
-		text-transform: capitalize;
-		border: var(--size-px-01) solid var(--color-gray-light);
-
-		& .property ~ .property {
-			border-top: var(--size-px-01) solid var(--color-blue-dark);
-		}
-
-		& .property {
-			display: flex;
-
-			& span:nth-child(2) {
-				margin-left: auto;
-			}
-		
-		}
-
-		& .propinteractive {
-			&:hover {
-				background-color: var(--color-blue-light);
-			}
+			font-weight: var(--font-weight-6);
+			font-size: var(--size-rem-16);
 		}
 
 	}
 
 }
 
+@keyframes fadein {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
 @media (min-width: 721px) {
 	.card {
-		
 		& .name {
-
 			& h2 {
-				font-size: var(--size-rem-1);
-			}
-		}
-		
-		& .properties {
-			font-size: var(--size-rem-09);
+				font-size: var(--size-rem-11);
+			}	
 		}
 	}
 }

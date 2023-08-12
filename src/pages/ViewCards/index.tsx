@@ -19,7 +19,7 @@ function ViewCards() {
 						key={card.id}
 						id={card.id}
 						name={card.name}
-						avatar={card.avatar}
+						image={card.image}
 						properties={card.properties}
 						interactive
 					/>

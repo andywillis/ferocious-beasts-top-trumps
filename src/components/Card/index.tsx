@@ -1,6 +1,11 @@
-import style from './style.module.css';
+import { useState } from 'react';
 
-import { CardType, PropertyType } from '../../types';
+import { CardType } from '../../types';
+
+import CardImage from './CardImage';
+import CardProperties from './CardProperties';
+
+import style from './style.module.css';
 
 /**
  * Card
@@ -8,11 +13,18 @@ import { CardType, PropertyType } from '../../types';
  * @param {CardType} { name, avatar, properties }
  * @return {React.Element} Card component
  */
-function Card({ name, avatar, properties, interactive = false }: CardType) {
+function Card({ name, image, properties, interactive = false }: CardType) {
 	
+	const [ isImageLoaded, setIsImageLoaded ] = useState(false);
+
+	function handleImageLoad() {
+		setIsImageLoaded(true);
+	}
+
 	const cn = [
 		style.card,
-		interactive && style.cardinteractive
+		!isImageLoaded && style.hidden,
+		interactive && style.interactive
 	].join(' ');
 	
 	return (
@@ -22,25 +34,16 @@ function Card({ name, avatar, properties, interactive = false }: CardType) {
 				<h2>{name}</h2>
 			</header>
 
-			<img className={style.avatar} src={avatar} alt={name} />
+			<CardImage
+				src={`assets/images/${image.name}`}
+				alt={image.alt}
+				handleImageLoad={handleImageLoad}
+			/>
 
-			<ul className={style.properties}>
-				{properties.map((property: PropertyType) => {
-					
-					const cn = [
-						style.property,
-						interactive && style.propinteractive
-					].join(' ');
-					
-					return (
-						<li key={property.id} className={cn}>
-							<span>{property.name}</span>
-							<span>{property.value}</span>
-						</li>
-					);
-
-				})}
-			</ul>
+			<CardProperties
+				properties={properties}
+				interactive
+			/>
 
 		</section>
 	);

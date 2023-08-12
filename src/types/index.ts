@@ -7,14 +7,20 @@ export type PropertyType = {
 export type AnimalType = {
 	id: number;
 	name: string;
-	avatar: string;
+	image: {
+		name: string;
+		alt: string
+	};
 	properties: PropertyType[]
 };
 
 export type CardType = {
 	id: number;
 	name: string;
-	avatar: string;
+	image: {
+		name: string;
+		alt: string
+	};
 	interactive: boolean;
 	properties: PropertyType[]
 };
