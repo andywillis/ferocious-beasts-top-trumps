@@ -1,10 +1,9 @@
 import Card from '../../components/Card';
+import Grid from '../../components/Grid';
 
 import { AnimalType } from '../../types';
 
 import sortAnimals from '../../helpers/sortAnimals';
-
-import style from './style.module.css';
 
 /**
  * ViewCards
@@ -15,20 +14,22 @@ import style from './style.module.css';
  */
 function ViewCards() {
 	return (
-		<main className={style.main}>
-			{sortAnimals().map((card: AnimalType, index: number) => {
-				return (
-					<Card
-						key={card.id}
-						id={card.id}
-						name={card.name}
-						image={card.image}
-						properties={card.properties}
-						interactive={false}
-						count={index}
-					/>
-				);
-			})}
+		<main>
+			<Grid>
+				{sortAnimals().map((card: AnimalType, index: number) => {
+					return (
+						<Card
+							key={card.id}
+							id={card.id}
+							name={card.name}
+							image={card.image}
+							properties={card.properties}
+							interactive={false}
+							count={index}
+						/>
+					);
+				})}
+			</Grid>
 		</main>
 	);
 }

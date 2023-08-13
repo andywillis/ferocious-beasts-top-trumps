@@ -1,6 +1,5 @@
 .properties {
 	flex-shrink: 0;
-	font-size: var(--size-rem-13);
 	margin-top: var(--size-rem-01) !important;
 
 	& .property ~ .property {
@@ -10,7 +9,7 @@
 	& .property {
 		display: flex;
 		text-transform: capitalize;
-		font-size: var(--size-rem-09);
+		font-size: var(--size-rem-13);
 
 		& span:nth-child(2) {
 			margin-left: auto;
@@ -51,6 +50,8 @@
 
 @media (min-width: 721px) {
 	.properties {
-		font-size: var(--size-rem-09);
+		& .property {
+			font-size: var(--size-rem-09);
+		}
 	}
 }
