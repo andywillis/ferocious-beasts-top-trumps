@@ -1,8 +1,7 @@
 .properties {
 	flex-shrink: 0;
 	font-size: var(--size-rem-13);
-	text-transform: capitalize;
-	border: var(--size-px-01) solid var(--color-gray-light);
+	margin-top: var(--size-rem-01) !important;
 
 	& .property ~ .property {
 		border-top: var(--size-px-01) solid var(--color-green-dark);
@@ -10,17 +9,42 @@
 
 	& .property {
 		display: flex;
+		text-transform: capitalize;
+		font-size: var(--size-rem-09);
 
 		& span:nth-child(2) {
 			margin-left: auto;
 		}
-	
-	}
 
-	& .interactive {
-		&:hover {
-			background-color: var(--color-blue-light);
+		&.interactive {
+
+			& button {
+				width: 100%;
+				display: flex;
+				text-transform: capitalize;
+				border-radius: 0;
+				background-color: transparent;
+				padding: var(--size-rem-03) 0;
+				font-size: var(--size-rem-09);
+				color: var(--color-gray-dark);
+				border-right: 0;
+				border-bottom: 0;
+				border-left: 0;
+				font-family: inherit;
+				
+				& span:nth-child(2) {
+					margin-left: auto;
+				}
+
+				&:hover {
+					cursor: pointer;
+					background-color: var(--color-blue-light);
+				}
+	
+			}
+	
 		}
+	
 	}
 
 }

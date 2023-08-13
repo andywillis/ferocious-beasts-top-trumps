@@ -26,6 +26,17 @@ function CardProperties({ properties, interactive }: CardPropertiesProps) {
 					style.property,
 					interactive && style.interactive
 				].join(' ');
+
+				if (interactive) {
+					return (
+						<li key={property.id} className={cn}>
+							<button type="button">
+								<span>{property.name}</span>
+								<span>{property.value}</span>
+							</button>
+						</li>
+					);
+				}
 				
 				return (
 					<li key={property.id} className={cn}>

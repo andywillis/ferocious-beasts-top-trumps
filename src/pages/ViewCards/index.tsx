@@ -2,7 +2,7 @@ import Card from '../../components/Card';
 
 import { AnimalType } from '../../types';
 
-import { sortedAnimals } from '../../store';
+import sortAnimals from '../../helpers/sortAnimals';
 
 import style from './style.module.css';
 
@@ -13,7 +13,7 @@ import style from './style.module.css';
 function ViewCards() {
 	return (
 		<main className={style.main}>
-			{sortedAnimals.value.map((card: AnimalType, index: number) => {
+			{sortAnimals().map((card: AnimalType, index: number) => {
 				return (
 					<Card
 						key={card.id}
