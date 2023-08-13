@@ -14,14 +14,9 @@ export type AnimalType = {
 	properties: PropertyType[]
 };
 
-export type CardType = {
-	id: number;
-	name: string;
-	image: {
-		name: string;
-		alt: string
-	};
-	properties: PropertyType[];
+type BaseCard = {
 	interactive: boolean;
 	count: number;
-};
+}
+
+export type CardType = BaseCard & AnimalType;

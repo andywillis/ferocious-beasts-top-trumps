@@ -7,12 +7,23 @@ interface CardPropertiesProps {
 	interactive: boolean;
 }
 
+/**
+ * In case the properties in the data are not correctly added
+ * this function sorts them before rendering
+ *
+ * @param {PropertyType} a
+ * @param {PropertyType} b
+ * @return {array}
+ */
 function sortPropertiesbyName(a: PropertyType, b: PropertyType) {
 	return a.name.localeCompare(b.name);
 }
 
 /**
  * CardProperties
+ *
+ * A list of card properties (or statistics). If "interactive" the
+ * component returns a list of buttons, otherwise a simple list
  *
  * @param {CardPropertiesProps} { properties, interactive }
  * @return {React.Element} CardProperties component

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 const os = require('os');
 
 module.exports = {
@@ -19,7 +20,13 @@ module.exports = {
 		}
 	],
 	files: [
-		'**/*.md'
+		'**/*.md',
+		'**/*.css',
+		'**/*.ts',
+		'**/*.tsx',
+		'**/*.js',
+		'**/*.jsx',
+		'**/*.json'
 	],
 	ignorePaths: [
 		'.git',

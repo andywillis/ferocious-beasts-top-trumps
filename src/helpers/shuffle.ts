@@ -2,6 +2,7 @@ import { AnimalType } from '../types';
 
 /**
  * Fisher-Yates Shuffle
+ * https://stackoverflow.com/a/59837259/1377002
  *
  * @param {AnimalType[]} arr
  * @return {AnimalType[]}

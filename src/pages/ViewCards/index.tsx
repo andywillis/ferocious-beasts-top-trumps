@@ -8,6 +8,9 @@ import style from './style.module.css';
 
 /**
  * ViewCards
+ *
+ * Sorts and shows a grid of all the animal cards
+ *
  * @return {React.Element} ViewCards component/page
  */
 function ViewCards() {

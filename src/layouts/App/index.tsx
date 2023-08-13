@@ -7,6 +7,11 @@ import PlayGame from '../../pages/PlayGame';
 import ViewCards from '../../pages/ViewCards';
 import Instructions from '../../pages/Instructions';
 
+/**
+ * Sets up the header, and routing between the app pages
+ *
+ * @return {React.Element}
+ */
 function App() {
 	return (
 		<>

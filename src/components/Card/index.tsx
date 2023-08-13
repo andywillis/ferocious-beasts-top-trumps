@@ -8,6 +8,11 @@ import style from './style.module.css';
 /**
  * Card
  *
+ * A simple card component with a header, and image, and
+ * a set of properties. The card can be toggled between
+ * interactive/non-interactive. An interactive card has
+ * slightly different styling, and has buttons.
+ *
  * @param {CardType} { name, avatar, properties }
  * @return {React.Element} Card component
  */

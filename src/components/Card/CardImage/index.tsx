@@ -38,6 +38,7 @@ function CardImage({ src, alt, count }: CardImageProps) {
 			onLoad={handleImageLoad}
 		/>
 	);
+
 }
 
 export default CardImage;

@@ -8,6 +8,9 @@ import getThreeRandomAnimals from '../../helpers/getThreeRandomAnimals';
 /**
  * Home
  *
+ * Simple home page describing the game, and showing a random
+ * sample of three cards
+ *
  * @return {React.Element} Home component/page
  */
 function Home() {
