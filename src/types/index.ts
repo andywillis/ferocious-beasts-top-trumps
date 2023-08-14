@@ -20,3 +20,8 @@ type BaseCard = {
 }
 
 export type CardType = BaseCard & AnimalType;
+
+export type SentenceType = {
+	id: number;
+	text: string;
+}

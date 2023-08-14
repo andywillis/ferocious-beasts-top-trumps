@@ -6,3 +6,8 @@ import { AnimalType } from '../types';
 import animalsData from '../data/animals.json';
 
 export const animals = signal(animalsData as AnimalType[]);
+
+export const decks = signal({
+	computer: [],
+	human: []
+});
