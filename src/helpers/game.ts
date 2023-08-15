@@ -76,12 +76,15 @@ export function initialiseGame() {
 	deckHuman.value = shuffled.slice(len / 2, len);
 
 	resetMessageBox();
-	updateMessageBox(availableMessages.peek().humanstart);
+	updateMessageBox(availableMessages.peek().humanplay);
 	updateMessageBox(availableMessages.peek().clickstat);
 }
 
 /**
  * calculateWin
+ *
+ * We calculate a win after the human player has
+ * clicked on an animal stat.
  *
  * @export
  * @param {string} name
@@ -112,12 +115,27 @@ export function calculateWin(animal: string, name: string, value: number) {
 		updateMessageBox(availableMessages.peek().tie);
 	}
 
-	showNextRoundButton.value = true;
+	if (deckComputer.value.length === 0) {
+		updateMessageBox(availableMessages.peek().humanwinner);
+	} else if (deckHuman.value.length === 0) {
+		updateMessageBox(availableMessages.peek().computerwinner);
+	} else {
+		showNextRoundButton.value = true;
+	}
 
 }
 
 /**
  * playNextRound
+ *
+ * We calculate the new positions of the cards in the decks, and display a
+ * corresponding message, only after clicking on the next round button.
+ *
+ * For each win we recreate a new deck with the computer/human cards,
+ * and any cards on the board from a tie, and then update the losers deck.
+ *
+ * For a tie we add the cards to the board deck - whoever wins the next round
+ * gets the losers's card, and all the cards on the board.
  *
  * @export
  */
@@ -129,11 +147,9 @@ export function playNextRound() {
 	resetMessageBox();
 
 	if (winner.value === 'human') {
-		const computerCard = deckComputer.value.at(-1) as CardType;
-		const humanCard = deckHuman.value.at(-1) as CardType;
 		deckHuman.value = [
-			humanCard,
-			computerCard,
+			deckHuman.value.at(-1) as CardType,
+			deckComputer.value.at(-1) as CardType,
 			...deckBoard.value,
 			...deckHuman.value.slice(0, -1)
 		];
@@ -144,24 +160,25 @@ export function playNextRound() {
 	}
 
 	if (winner.value === 'computer') {
-		const humanCard = deckHuman.value.at(-1) as CardType;
-		const computerCard = deckComputer.value.at(-1) as CardType;
 		deckComputer.value = [
-			computerCard,
-			humanCard,
+			deckComputer.value.at(-1) as CardType,
+			deckHuman.value.at(-1) as CardType,
 			...deckBoard.value,
 			...deckComputer.value.slice(0, -1)
 		];
 		deckHuman.value = deckHuman.value.slice(0, -1);
 		deckBoard.value = [];
 		updateMessageBox(availableMessages.value.computeradded);
+		updateMessageBox(availableMessages.value.computerplay);
 		updateMessageBox(availableMessages.value.clickstat);
 	}
 
 	if (winner.value === 'tie') {
-		const computerCard = deckComputer.value.at(-1) as CardType;
-		const humanCard = deckHuman.value.at(-1) as CardType;
-		deckBoard.value = [ humanCard, computerCard, ...deckBoard.value ];
+		deckBoard.value = [
+			deckHuman.value.at(-1) as CardType,
+			deckComputer.value.at(-1) as CardType,
+			...deckBoard.value
+		];
 		deckComputer.value = deckComputer.value.slice(0, -1);
 		deckHuman.value = deckHuman.value.slice(0, -1);
 		updateMessageBox(availableMessages.value.boardadded);
