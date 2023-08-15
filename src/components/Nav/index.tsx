@@ -23,9 +23,9 @@ function Nav() {
 			<ul>
 				<li>
 					<NavLink
-						to="/playgame"
+						to="/startgame"
 						className={(props) => checkNavItemStatus(props)}
-					>Play Game
+					>Start game
 					</NavLink>
 				</li>
 				<li>

@@ -9,13 +9,13 @@ import { initialiseGame } from '../../helpers/game';
 import style from './style.module.css';
 
 /**
- * PlayGame
+ * Game
  *
  * Sets up the board for playing
  *
- * @return {React.Element} PlayGame component/page
+ * @return {React.Element} Game component/page
  */
-function PlayGame() {
+function Game() {
 	
 	useEffect(() => {
 		initialiseGame();
@@ -48,4 +48,4 @@ function PlayGame() {
 	);
 }
 
-export default PlayGame;
+export default Game;

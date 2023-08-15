@@ -2,10 +2,7 @@ import { Routes, Route } from 'react-router-dom';
 
 import Header from '../../components/Header';
 
-import Home from '../../pages/Home';
-import PlayGame from '../../pages/PlayGame';
-import ViewCards from '../../pages/ViewCards';
-import Instructions from '../../pages/Instructions';
+import { Game, Home, Instructions, ViewCards } from '../../pages';
 
 /**
  * Sets up the header, and routing between the app pages
@@ -18,7 +15,7 @@ function App() {
 			<Header title="Ferocious Beasts Top Trumps" />
 			<Routes>
 				<Route path="/" element={<Home />} />
-				<Route path="/playgame" element={<PlayGame />} />
+				<Route path="/startgame" element={<Game />} />
 				<Route path="/instructions" element={<Instructions />} />
 				<Route path="/viewcards" element={<ViewCards />} />
 			</Routes>
