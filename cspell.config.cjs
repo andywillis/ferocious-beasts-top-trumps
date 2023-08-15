@@ -30,6 +30,7 @@ module.exports = {
 	],
 	ignorePaths: [
 		'.git',
+		'build',
 		'node_modules',
 		'pnpm-lock.yaml'
 	]
