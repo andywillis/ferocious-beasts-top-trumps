@@ -72,9 +72,14 @@ export function initialiseGame() {
 
 	const shuffled = shuffleCards(cards.peek());
 	const len = shuffled.length;
-
 	deckComputer.value = shuffled.slice(0, len / 2);
 	deckHuman.value = shuffled.slice(len / 2, len);
+
+	computerCardVisible.value = false;
+	humanCardInteractive.value = true;
+	showNextRoundButton.value = false;
+	winner.value = '';
+	resetMessageBox();
 
 	resetMessageBox();
 	updateMessageBox(availableMessages.peek().humanplay);
