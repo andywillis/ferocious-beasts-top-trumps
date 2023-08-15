@@ -1,11 +1,16 @@
-import { signal } from '@preact/signals-react';
+import { signal, computed } from '@preact/signals-react';
 
 import { CardType, DeckType, MessageType } from '../types';
 
-import animalsData from '../data/animals.json';
+import cardsData from '../data/cards.json';
 import availableMessagesData from '../data/messages.json';
 
-export const animals = signal(animalsData as CardType[]);
+import { sortCards } from '../helpers/cards';
+
+export const cards = signal(cardsData as CardType[]);
+
+export const sortedCards = computed(() => sortCards(cards.value));
+
 export const availableMessages = signal(availableMessagesData);
 
 export const messages = signal([] as MessageType[]);

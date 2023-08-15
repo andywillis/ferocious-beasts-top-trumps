@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 
 import { MessageBox, Deck, Board } from '../../components';
 
-import { decks, animals } from '../../store';
+import { decks, cards } from '../../store';
 
 import { initialiseGame } from '../../helpers/game';
 
@@ -21,22 +21,22 @@ function Game() {
 		if (!decks.value.human.length) initialiseGame();
 	}, []);
 	
-	const totalCards = animals.peek().length;
+	const totalCards = cards.peek().length;
 
 	return (
 		<main className={style.main}>
-			<MessageBox />
 			<Board>
 				<Deck
 					type="computer"
 					totalCards={totalCards}
 					deck={decks.value.computer}
 				/>
-				<Deck
+				<MessageBox />
+				{/* <Deck
 					type="board"
 					totalCards={totalCards}
 					deck={decks.value.board}
-				/>
+				/> */}
 				<Deck
 					type="human"
 					totalCards={totalCards}

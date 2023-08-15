@@ -1,7 +1,7 @@
 {
 	"welcome": "Welcome to Ferocious Beasts Top Trumps",
 	"humanstart": "Human player to start",
-	"clickstat": "Click a statistic on your card  --->",
+	"clickstat": "Click a statistic ➔",
 	"computerstart": "Computer player to start",	
 	"humanwin": "You have won this round",
 	"humanadded": "Your card has been added to the computer's deck",

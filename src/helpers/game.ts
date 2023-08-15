@@ -1,6 +1,11 @@
-import { availableMessages, animals, decks, messages } from '../store';
+import {
+	availableMessages,
+	cards,
+	decks,
+	messages
+} from '../store';
 
-import shuffle from './shuffle';
+import { shuffleCards } from './cards';
 
 function getUUID() {
 	return crypto.randomUUID();
@@ -11,7 +16,7 @@ export function updateMessageBox(message: string) {
 }
 
 export function initialiseGame() {
-	const shuffled = shuffle(animals.peek());
+	const shuffled = shuffleCards(cards.peek());
 	const len = shuffled.length;
 	const computerDeck = shuffled.slice(0, len / 2);
 	const humanDeck = shuffled.slice(len / 2, len);

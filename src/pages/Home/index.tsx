@@ -4,7 +4,7 @@ import style from './style.module.css';
 import Card from '../../components/Card';
 import Grid from '../../components/Grid';
 
-import getThreeRandomAnimals from '../../helpers/getThreeRandomAnimals';
+import { getThreeRandomCards } from '../../helpers/cards';
 
 /**
  * Home
@@ -21,7 +21,7 @@ function Home() {
 				Ferocious Beasts Top Trumps is a fun card game that can be enjoyed by everyone. The object of the game is to collect all of the cards in the deck by having the highest statistics on the card.
 			</section>
 			<Grid>
-				{getThreeRandomAnimals().map((card, index) => {
+				{getThreeRandomCards().map((card, index) => {
 					return (
 						<Card
 							key={card.id}
