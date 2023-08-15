@@ -2,6 +2,8 @@ import { Status, Card } from '../index';
 
 import { CardType } from '../../types';
 
+import { computerCardVisible } from '../../store';
+
 import style from './style.module.css';
 
 interface DeckProps {
@@ -20,6 +22,12 @@ interface DeckProps {
  * @return {React.Element}
  */
 function Deck({ type, deck, totalCards, interactive }: DeckProps) {
+	
+	function isVisible() {
+		return (type === 'computer' && computerCardVisible.value === true)
+			|| type === 'human';
+	}
+	
 	return (
 		<section className={style.deck}>
 			<Status
@@ -32,6 +40,7 @@ function Deck({ type, deck, totalCards, interactive }: DeckProps) {
 					<Card
 						key={card.id}
 						id={card.id}
+						visible={isVisible()}
 						name={card.name}
 						image={card.image}
 						properties={card.properties}

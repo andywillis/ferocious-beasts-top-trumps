@@ -11,6 +11,7 @@ export type CardType = {
 		name: string;
 		alt: string
 	};
+	visible: boolean;
 	properties: PropertyType[];
 	interactive?: boolean;
 	count?: number

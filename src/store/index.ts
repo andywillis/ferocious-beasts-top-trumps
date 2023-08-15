@@ -20,3 +20,5 @@ export const decks = signal({
 	board: [],
 	human: []
 } as DeckType);
+
+export const computerCardVisible = signal(false);

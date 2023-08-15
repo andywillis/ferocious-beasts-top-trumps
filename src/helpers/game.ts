@@ -1,20 +1,38 @@
 import {
 	availableMessages,
 	cards,
+	computerCardVisible,
 	decks,
 	messages
 } from '../store';
 
 import { shuffleCards } from './cards';
 
+/**
+ * getUUID
+ *
+ * Returns a unique id as a string
+ *
+ * @return {string}
+ */
 function getUUID() {
 	return crypto.randomUUID();
 }
 
-export function updateMessageBox(message: string) {
+/**
+ * updateMessageBox
+ *
+ * @param {string} message
+ */
+function updateMessageBox(message: string) {
 	messages.value.push({ id: getUUID(), text: message });
 }
 
+/**
+ * initialiseGame
+ *
+ * @export
+ */
 export function initialiseGame() {
 	const shuffled = shuffleCards(cards.peek());
 	const len = shuffled.length;
@@ -27,5 +45,6 @@ export function initialiseGame() {
 }
 
 export function calculateWin(name: string, value: number) {
+	computerCardVisible.value = true;
 	console.log(name, value);
 }
