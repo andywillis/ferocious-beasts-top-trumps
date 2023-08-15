@@ -6,14 +6,6 @@
 	font-stretch: 25% 151%;
 }
 
-@font-face {
-	font-family: Code;
-	font-style: normal;
-	src: url('/assets/fonts/SourceCodePro-VariableFont_wght.ttf') format('truetype');
-	font-weight: 100 900;
-	font-stretch: 25% 151%;
-}
-
 :root {
 
 	font-family: Main, sans-serif;
@@ -37,8 +29,5 @@
 	--font-weight-7: 700;
 	--font-weight-8: 800;
 	--font-weight-9: 900;
-
-	/* --font-code-inline: Main, sans-serif; */
-	--font-code-pre: Code, monospace;
 
 }

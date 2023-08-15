@@ -8,6 +8,17 @@
 	& p {
 		margin: 0;
 		padding: 0;	
+		text-align: center;
+	}
+
+	& .nextRound {
+		margin-top: var(--size-rem-1);
+		font-size: var(--size-rem-09);
+
+		&:hover {
+			cursor: pointer;
+		}
+
 	}
 
 }

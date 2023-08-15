@@ -3,9 +3,16 @@ import {
 	cards,
 	currentComputerCard,
 	computerCardVisible,
-	decks,
-	messages
+	deckComputer,
+	deckHuman,
+	showNextRoundButton,
+	messages,
+	winner
 } from '../store';
+
+import { CardType } from '../types';
+
+import { toCapitalCase } from './string';
 
 import { shuffleCards } from './cards';
 
@@ -15,9 +22,15 @@ import { shuffleCards } from './cards';
  * @param {string} name
  * @return {number}
  */
-function getComputerCardValue(name: string) {
-	return currentComputerCard.peek()?.properties
-		.find(prop => prop.name === name)?.value as number;
+function getComputerCardDetails(name: string) {
+	const card = currentComputerCard.peek();
+	return {
+		name: card?.name as string,
+		property: {
+			name,
+			value: card?.properties.find(prop => prop.name === name)?.value as number
+		}
+	};
 }
 
 /**
@@ -57,11 +70,9 @@ export function initialiseGame() {
 
 	const shuffled = shuffleCards(cards.peek());
 	const len = shuffled.length;
-	const computerDeck = shuffled.slice(0, len / 2);
-	const humanDeck = shuffled.slice(len / 2, len);
 
-	decks.value.computer = computerDeck;
-	decks.value.human = humanDeck;
+	deckComputer.value = shuffled.slice(0, len / 2);
+	deckHuman.value = shuffled.slice(len / 2, len);
 
 	resetMessageBox();
 	updateMessageBox(availableMessages.peek().humanstart);
@@ -75,21 +86,64 @@ export function initialiseGame() {
  * @param {string} name
  * @param {number} value
  */
-export function calculateWin(name: string, value: number) {
+export function calculateWin(animal: string, name: string, value: number) {
 
 	computerCardVisible.value = true;
 
-	const computerValue = getComputerCardValue(name);
-	console.log(computerValue, value);
+	const cardComputerDetails = getComputerCardDetails(name);
 
 	resetMessageBox();
-	if (value > computerValue) {
+
+	if (value > cardComputerDetails.property.value) {
+		winner.value = 'human';
 		updateMessageBox(availableMessages.peek().humanwin);
+		updateMessageBox(`(${toCapitalCase(animal)} beats ${toCapitalCase(cardComputerDetails.name)} on ${name})`);
 	}
-	if (computerValue > value) {
+
+	if (cardComputerDetails.property.value > value) {
+		winner.value = 'computer';
 		updateMessageBox(availableMessages.peek().computerwin);
+		updateMessageBox(`(${toCapitalCase(cardComputerDetails.name)} beats ${toCapitalCase(animal)} on ${name})`);
 	}
-	if (computerValue === value) {
+
+	if (cardComputerDetails.property.value === value) {
+		winner.value = 'tie';
 		updateMessageBox(availableMessages.peek().tie);
 	}
+
+	showNextRoundButton.value = true;
+
+}
+
+/**
+ * playNextRound
+ *
+ * @export
+ */
+export function playNextRound() {
+	
+	computerCardVisible.value = false;
+	showNextRoundButton.value = false;
+
+	resetMessageBox();
+
+	if (winner.value === 'human') {
+		const computerCard = deckComputer.value.pop() as CardType;
+		const humanCard = deckHuman.value.pop() as CardType;
+		deckHuman.value = [ humanCard, computerCard, ...deckHuman.peek() ];
+		updateMessageBox(availableMessages.value.humanadded);
+		updateMessageBox(availableMessages.value.clickstat);
+	}
+
+	if (winner.value === 'computer') {
+		const humanCard = deckHuman.value.pop() as CardType;
+		const computerCard = deckComputer.value.pop() as CardType;
+		deckComputer.value = [ computerCard, humanCard, ...deckComputer.peek() ];
+	}
+
+	if (winner.value === 'tie') {
+		// const computerCard = decks.value.computer.pop() as CardType;
+		// decks.value.human.unshift(computerCard);
+	}
+
 }

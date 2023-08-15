@@ -24,7 +24,7 @@ export default defineConfig({
 	build: {
 		target: 'esnext',
 		emptyOutDir: true,
-		outDir: './build',
+		outDir: '../build',
 		sourcemap: true
 	}
 });

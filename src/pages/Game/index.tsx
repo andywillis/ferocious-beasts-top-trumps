@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 
 import { MessageBox, Deck, Board } from '../../components';
 
-import { decks, cards } from '../../store';
+import { deckComputer, deckHuman, cards } from '../../store';
 
 import { initialiseGame } from '../../helpers/game';
 
@@ -18,10 +18,10 @@ import style from './style.module.css';
 function Game() {
 	
 	useEffect(() => {
-		if (!decks.value.human.length) initialiseGame();
+		if (!deckHuman.value.length) initialiseGame();
 	}, []);
 	
-	const totalCards = cards.peek().length;
+	const totalCards = cards.value.length;
 
 	return (
 		<main className={style.main}>
@@ -29,7 +29,7 @@ function Game() {
 				<Deck
 					type="computer"
 					totalCards={totalCards}
-					deck={decks.value.computer}
+					deck={deckComputer.value}
 				/>
 				<MessageBox />
 				{/* <Deck
@@ -40,7 +40,7 @@ function Game() {
 				<Deck
 					type="human"
 					totalCards={totalCards}
-					deck={decks.value.human}
+					deck={deckHuman.value}
 					interactive
 				/>
 			</Board>

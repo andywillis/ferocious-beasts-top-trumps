@@ -1,4 +1,6 @@
-import { messages } from '../../store';
+import { messages, showNextRoundButton } from '../../store';
+
+import { playNextRound } from '../../helpers/game';
 
 import style from './style.module.css';
 
@@ -11,11 +13,24 @@ import style from './style.module.css';
  * @return {React.Element}
  */
 function MessageBox() {
+
+	function handleClick() {
+		playNextRound();
+	}
+
 	return (
 		<section className={style.messageBox}>
 			{messages.value.map(message => {
 				return <p key={message.id}>{message.text}</p>;
 			})}
+			{showNextRoundButton.value && (
+				<button
+					onClick={handleClick}
+					className={style.nextRound}
+					type="button"
+				>Play next round
+				</button>
+			)}
 		</section>
 	);
 }

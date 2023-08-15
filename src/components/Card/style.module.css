@@ -13,6 +13,7 @@
 	/* border-radius: var(--size-px-05); */
 	padding: var(--size-rem-05);
 	background-color: var(--color-gray-light-70);
+	transition: opacity 0.5s;
 	
 	&.interactive {
 		&:hover {

@@ -596,7 +596,7 @@
 		"name": "chameleon",
 		"image": {
 			"name": "chameleon.webp",
-			"alt": "Photo of a cheetah"
+			"alt": "Photo of a chameleon"
 		},
 		"properties": [
 			{ "id": 1, "name": "aggression", "value": 1 },

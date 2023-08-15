@@ -22,12 +22,12 @@ interface DeckProps {
  * @return {React.Element}
  */
 function Deck({ type, deck, totalCards, interactive }: DeckProps) {
-	
+
 	function isVisible() {
 		return (type === 'computer' && computerCardVisible.value === true)
 			|| type === 'human';
 	}
-	
+
 	return (
 		<section className={style.deck}>
 			<Status
