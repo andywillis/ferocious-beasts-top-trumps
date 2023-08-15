@@ -1,7 +1,9 @@
 import style from './style.module.css';
 
 interface StatusProps {
-	status: string;
+	type: string;
+	numberOfCards: number;
+	totalCards: number;
 }
 
 /**
@@ -12,10 +14,10 @@ interface StatusProps {
  * @param {StatusProps} { status }
  * @return {React.Element}
  */
-function Status({ status }: StatusProps) {
+function Status({ type, numberOfCards, totalCards }: StatusProps) {
 	return (
 		<section className={style.status}>
-			{status}
+			{`${type} has ${numberOfCards} / ${totalCards} cards`}
 		</section>
 	);
 }

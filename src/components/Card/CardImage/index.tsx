@@ -5,7 +5,7 @@ import style from './style.module.css';
 interface CardImageProps {
 	src: string;
 	alt: string;
-	count: number;
+	count?: number;
 }
 
 /**
@@ -32,7 +32,7 @@ function CardImage({ src, alt, count }: CardImageProps) {
 			width="250"
 			height="125"
 			className={cn}
-			loading={count > 10 ? 'lazy' : 'eager'}
+			loading={count && count > 10 ? 'lazy' : 'eager'}
 			src={src}
 			alt={alt}
 			onLoad={handleImageLoad}

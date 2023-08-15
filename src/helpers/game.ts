@@ -2,7 +2,7 @@ import { animals, decks } from '../store';
 
 import shuffle from './shuffle';
 
-function initialiseGame() {
+export function initialiseGame() {
 	const shuffled = shuffle(animals.peek());
 	const len = shuffled.length;
 	const computerDeck = shuffled.slice(0, len / 2);
@@ -11,4 +11,6 @@ function initialiseGame() {
 	decks.value.human = humanDeck;
 }
 
-export default initialiseGame;
+export function calculateWin(name: string, value: number) {
+	console.log(name, value);
+}

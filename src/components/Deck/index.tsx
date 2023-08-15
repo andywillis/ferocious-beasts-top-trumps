@@ -7,6 +7,7 @@ import style from './style.module.css';
 interface DeckProps {
 	type: string;
 	deck: CardType[];
+	totalCards: number;
 	interactive?: boolean
 }
 
@@ -18,10 +19,14 @@ interface DeckProps {
  * @param {DeckProps} { deck }
  * @return {React.Element}
  */
-function Deck({ type, deck, interactive }: DeckProps) {
+function Deck({ type, deck, totalCards, interactive }: DeckProps) {
 	return (
 		<section className={style.deck}>
-			<Status status={`${type} has ${deck.length} card(s)`} />
+			<Status
+				type={type}
+				numberOfCards={deck.length}
+				totalCards={totalCards}
+			/>
 			{deck.slice(-1).map((card, index) => {
 				return (
 					<Card
