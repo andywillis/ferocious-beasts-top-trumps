@@ -27,9 +27,7 @@
 body {
 	display: flex;
 	flex-direction: column;
-	/* grid-template-areas: "header" "main"; */
 	border-left: var(--size-px-05) solid var(--color-green-regular);
-	/* border-right: var(--size-px-05) solid var(--color-green-regular); */
 	min-height: 100vh;
 	margin: 0;
 	font-size: var(--size-rem-15);
@@ -38,7 +36,6 @@ body {
 @media (min-width: 721px) {
 	body {
 		border-left: var(--size-px-10) solid var(--color-green-regular-faded);
-		/* border-right: var(--size-px-10) solid var(--color-green-regular-faded); */
 		margin: 0;
     font-size: var(--size-rem-1);
 		overflow-x: hidden;

@@ -4,8 +4,6 @@ import { CardType } from '../../types';
 
 import { computerCardVisible, humanCardInteractive } from '../../store';
 
-import style from './style.module.css';
-
 interface DeckProps {
 	type: string;
 	deck: CardType[];
@@ -29,7 +27,7 @@ function Deck({ type, deck, totalCards, interactive }: DeckProps) {
 	}
 
 	return (
-		<section className={style.deck}>
+		<section>
 			<Status
 				type={type}
 				numberOfCards={deck.length}

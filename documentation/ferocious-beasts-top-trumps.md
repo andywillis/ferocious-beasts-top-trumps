@@ -2,6 +2,5 @@
 
 ## To do
 
-- I18N (add some languages)
-- Game engine
+- Computer player working properly
 - Fixed to landscape in mobile views

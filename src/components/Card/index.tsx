@@ -24,7 +24,6 @@ function Card(props: CardType) {
 		visible = true,
 		properties,
 		interactive = false,
-		// count
 	} = props;
 
 	const containerCn = [
@@ -48,7 +47,6 @@ function Card(props: CardType) {
 				<CardImage
 					src={`images/${image.name}`}
 					alt={image.alt}
-					// count={count}
 				/>
 
 				<CardProperties

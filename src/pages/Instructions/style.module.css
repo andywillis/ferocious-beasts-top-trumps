@@ -4,7 +4,6 @@
 		var(--size-rem-2)
 		var(--size-rem-2)
 		var(--size-rem-2);
-	/* padding: var(--size-rem-2) var(--size-rem-1); */
 	
 	& .step ~ .step {
 		margin-top: var(--size-rem-1);
@@ -21,8 +20,6 @@
 		}
 		
 		& ul {
-			/* margin-left: var(--size-rem-2); */
-			/* list-style: none; */
 
 			& li {
 				text-align: center;

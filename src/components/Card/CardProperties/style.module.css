@@ -49,20 +49,17 @@
 		& .property {
 			font-size: var(--size-rem-09);
 
-			/* &.interactive { */
-				/* padding: 0; */
-
-				& button {
+			& button {
+				border: 0;
+				padding: var(--size-rem-0285) 0;
+				font-size: var(--size-rem-09);
+			
+				&:active {
 					border: 0;
-					padding: var(--size-rem-0285) 0;
-					font-size: var(--size-rem-09);
-				
-					&:active {
-						border: 0;
-					}
-
 				}
-			/* } */
+
+			}
+
 		}
 	}
 }
