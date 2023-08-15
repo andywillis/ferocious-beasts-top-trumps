@@ -24,6 +24,7 @@ export const currentComputerCard = computed(() => {
 });
 
 export const computerCardVisible = signal(false);
+export const humanCardInteractive = signal(true);
 
 export const showNextRoundButton = signal(false);
 

@@ -54,10 +54,17 @@
 			font-size: var(--size-rem-09);
 
 			&.interactive {
+				/* padding: 0; */
 
 				& button {
-					padding: var(--size-rem-023);
-					font-size: var(--size-rem-087);
+					border: 0;
+					padding: var(--size-rem-0285) 0;
+					font-size: var(--size-rem-09);
+				
+				&:active {
+					border: 0;
+				}
+
 				}
 			}
 		}

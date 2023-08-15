@@ -8,7 +8,8 @@ import {
 	deckBoard,
 	showNextRoundButton,
 	messages,
-	winner
+	winner,
+	humanCardInteractive
 } from '../store';
 
 import { CardType } from '../types';
@@ -93,6 +94,7 @@ export function initialiseGame() {
 export function calculateWin(animal: string, name: string, value: number) {
 
 	computerCardVisible.value = true;
+	humanCardInteractive.value = false;
 
 	const cardComputerDetails = getComputerCardDetails(name);
 
@@ -125,6 +127,10 @@ export function calculateWin(animal: string, name: string, value: number) {
 
 }
 
+function computerPlay() {
+	// 
+}
+
 /**
  * playNextRound
  *
@@ -143,6 +149,7 @@ export function playNextRound() {
 	
 	computerCardVisible.value = false;
 	showNextRoundButton.value = false;
+	humanCardInteractive.value = true;
 
 	resetMessageBox();
 

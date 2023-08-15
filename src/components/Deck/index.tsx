@@ -2,7 +2,7 @@ import { Status, Card } from '../index';
 
 import { CardType } from '../../types';
 
-import { computerCardVisible } from '../../store';
+import { computerCardVisible, humanCardInteractive } from '../../store';
 
 import style from './style.module.css';
 
@@ -44,7 +44,7 @@ function Deck({ type, deck, totalCards, interactive }: DeckProps) {
 						name={card.name}
 						image={card.image}
 						properties={card.properties}
-						interactive={interactive}
+						interactive={interactive && humanCardInteractive.value === true}
 						count={index}
 					/>
 				);
