@@ -18,7 +18,7 @@ function Home() {
 	return (
 		<main className={style.main}>
 			<section className={style.intro}>
-				Ferocious Beasts Top Trumps is a fun card game that can be enjoyed by everyone. The object of the game is to collect all of the cards in the deck by having the highest statistics on the card.
+				Ferocious Beasts Top Trumps is a fun card game that can be enjoyed by everyone. The object of the game is to collect all of the cards in the deck by trying to beat the computer in each round.
 			</section>
 			<Grid>
 				{getThreeRandomCards().map((card, index) => {

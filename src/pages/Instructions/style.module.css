@@ -4,7 +4,6 @@
 		var(--size-rem-2)
 		var(--size-rem-2)
 		var(--size-rem-2);
-	/* padding: var(--size-rem-2) var(--size-rem-1); */
 	
 	& .step ~ .step {
 		margin-top: var(--size-rem-1);
@@ -21,8 +20,6 @@
 		}
 		
 		& ul {
-			/* margin-left: var(--size-rem-2); */
-			/* list-style: none; */
 
 			& li {
 				text-align: center;
@@ -36,17 +33,19 @@
 @media (min-width: 721px) {
 	.main {
 		margin:
-		var(--size-rem-2)
+		var(--size-rem-1)
 		var(--size-rem-4)
-		var(--size-rem-4)
+		var(--size-rem-1)
 		var(--size-rem-4);
 
 		& .step ~ .step {
-			margin-top: var(--size-rem-1);
+			margin-top: var(--size-rem-025);
 		}
 
 		& .step {
 			& header {
+				margin: 0;
+				padding: 0;
 				font-size: var(--size-rem-09);
 			}
 		}

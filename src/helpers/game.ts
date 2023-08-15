@@ -8,7 +8,8 @@ import {
 	deckBoard,
 	showNextRoundButton,
 	messages,
-	winner
+	winner,
+	humanCardInteractive
 } from '../store';
 
 import { CardType } from '../types';
@@ -71,9 +72,14 @@ export function initialiseGame() {
 
 	const shuffled = shuffleCards(cards.peek());
 	const len = shuffled.length;
-
 	deckComputer.value = shuffled.slice(0, len / 2);
 	deckHuman.value = shuffled.slice(len / 2, len);
+
+	computerCardVisible.value = false;
+	humanCardInteractive.value = true;
+	showNextRoundButton.value = false;
+	winner.value = '';
+	resetMessageBox();
 
 	resetMessageBox();
 	updateMessageBox(availableMessages.peek().humanplay);
@@ -93,6 +99,7 @@ export function initialiseGame() {
 export function calculateWin(animal: string, name: string, value: number) {
 
 	computerCardVisible.value = true;
+	humanCardInteractive.value = false;
 
 	const cardComputerDetails = getComputerCardDetails(name);
 
@@ -101,13 +108,13 @@ export function calculateWin(animal: string, name: string, value: number) {
 	if (value > cardComputerDetails.property.value) {
 		winner.value = 'human';
 		updateMessageBox(availableMessages.peek().humanwin);
-		updateMessageBox(`(${toCapitalCase(animal)} beats ${toCapitalCase(cardComputerDetails.name)} on ${name})`);
+		updateMessageBox(`(${toCapitalCase(name)}: ${toCapitalCase(animal)} beats ${toCapitalCase(cardComputerDetails.name)})`);
 	}
 
 	if (cardComputerDetails.property.value > value) {
 		winner.value = 'computer';
 		updateMessageBox(availableMessages.peek().computerwin);
-		updateMessageBox(`(${toCapitalCase(cardComputerDetails.name)} beats ${toCapitalCase(animal)} on ${name})`);
+		updateMessageBox(`(${toCapitalCase(name)}: ${toCapitalCase(cardComputerDetails.name)} beats ${toCapitalCase(animal)})`);
 	}
 
 	if (cardComputerDetails.property.value === value) {
@@ -115,15 +122,13 @@ export function calculateWin(animal: string, name: string, value: number) {
 		updateMessageBox(availableMessages.peek().tie);
 	}
 
-	if (deckComputer.value.length === 0) {
-		updateMessageBox(availableMessages.peek().humanwinner);
-	} else if (deckHuman.value.length === 0) {
-		updateMessageBox(availableMessages.peek().computerwinner);
-	} else {
-		showNextRoundButton.value = true;
-	}
+	showNextRoundButton.value = true;
 
 }
+
+// function computerPlay() {
+// 	//
+// }
 
 /**
  * playNextRound
@@ -143,6 +148,7 @@ export function playNextRound() {
 	
 	computerCardVisible.value = false;
 	showNextRoundButton.value = false;
+	humanCardInteractive.value = true;
 
 	resetMessageBox();
 
@@ -183,6 +189,16 @@ export function playNextRound() {
 		deckHuman.value = deckHuman.value.slice(0, -1);
 		updateMessageBox(availableMessages.value.boardadded);
 		updateMessageBox(availableMessages.value.clickstat);
+	}
+
+	if (deckHuman.value.length === cards.value.length) {
+		resetMessageBox();
+		updateMessageBox(availableMessages.peek().humanwinner);
+	}
+	
+	if (deckComputer.value.length === cards.value.length) {
+		resetMessageBox();
+		updateMessageBox(availableMessages.peek().computerwinner);
 	}
 
 }

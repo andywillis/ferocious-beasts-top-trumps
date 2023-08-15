@@ -13,7 +13,7 @@
 
 	& .nextRound {
 		margin-top: var(--size-rem-1);
-		font-size: var(--size-rem-09);
+		font-size: var(--size-rem-14);
 
 		&:hover {
 			cursor: pointer;
@@ -21,4 +21,12 @@
 
 	}
 
+}
+
+@media (min-width: 721px) {
+	.messageBox {
+		& .nextRound {
+			font-size: var(--size-rem-09);
+		}
+	}
 }

@@ -56,33 +56,25 @@ function CardProperties({ animal, properties, interactive }: CardPropertiesProps
 					interactive && style.interactive
 				].join(' ');
 
-				if (interactive) {
-					return (
-						<li key={property.id} className={cn}>
-							<button
-								type="button"
-								data-name={property.name}
-								data-value={property.value}
-								onClick={handleClick}
-								onKeyDown={handleKey}
-							>
-								<span>{property.name}</span>
-								<span>{property.value}</span>
-							</button>
-						</li>
-					);
-				}
-				
 				return (
 					<li key={property.id} className={cn}>
-						<span>{property.name}</span>
-						<span>{property.value}</span>
+						<button
+							type="button"
+							data-name={property.name}
+							data-value={property.value}
+							onClick={handleClick}
+							onKeyDown={handleKey}
+							disabled={!interactive}
+						>
+							<span>{property.name}</span>
+							<span>{property.value}</span>
+						</button>
 					</li>
 				);
-
 			})}
 		</ul>
 	);
+
 }
 
 export default CardProperties;

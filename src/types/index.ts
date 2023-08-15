@@ -21,9 +21,3 @@ export type MessageType = {
 	id: string;
 	text: string;
 }
-
-// export type DeckType = {
-// 	computer: CardType[];
-// 	board: CardType[];
-// 	human: CardType[];
-// }

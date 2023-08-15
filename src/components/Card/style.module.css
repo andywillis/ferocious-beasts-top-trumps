@@ -5,12 +5,9 @@
 
 .card {
 	display: flex;
-	/* min-height: 100%; */
 	width: 250px;
 	height: fit-content;
 	flex-direction: column;
-	/* border: var(--size-px-01) solid var(--color-gray-dark); */
-	/* border-radius: var(--size-px-05); */
 	padding: var(--size-rem-05);
 	background-color: var(--color-gray-light-70);
 	transition: opacity 0.5s;
