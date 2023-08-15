@@ -13,7 +13,7 @@ import style from './style.module.css';
 function MessageBox() {
 	return (
 		<section className={style.messageBox}>
-			{messages.value.map(message => {
+			{messages.peek().map(message => {
 				return <p key={message.id}>{message.text}</p>;
 			})}
 		</section>

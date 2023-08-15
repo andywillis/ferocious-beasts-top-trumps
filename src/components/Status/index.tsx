@@ -17,7 +17,8 @@ interface StatusProps {
 function Status({ type, numberOfCards, totalCards }: StatusProps) {
 	return (
 		<section className={style.status}>
-			{`${type} has ${numberOfCards} / ${totalCards} cards`}
+			<h3>{type}</h3>
+			<p>{`${numberOfCards} / ${totalCards} cards`}</p>
 		</section>
 	);
 }

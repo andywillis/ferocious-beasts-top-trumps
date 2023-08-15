@@ -1,5 +1,8 @@
 .messageBox {
 	display: flex;
+	max-height: 80px;
+	flex-direction: column;
+	align-items: center;
 	justify-content: center;
 	margin-bottom: var(--size-rem-05);
 

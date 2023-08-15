@@ -1,4 +1,4 @@
-import { SyntheticEvent } from 'react';
+import { SyntheticEvent, KeyboardEvent } from 'react';
 
 import { PropertyType } from '../../../types';
 
@@ -42,8 +42,15 @@ function CardProperties({ properties, interactive }: CardPropertiesProps) {
 					interactive && style.interactive
 				].join(' ');
 
+				function handleKey(e: KeyboardEvent) {
+					if (e.key === 'Enter') {
+						const { dataset: { name, value } } = e.target as HTMLButtonElement;
+						if (name && value) calculateWin(name, Number(value));
+					}
+				}
+
 				function handleClick(e: SyntheticEvent) {
-					const { dataset: { name, value } } = e.target as HTMLInputElement;
+					const { dataset: { name, value } } = e.target as HTMLButtonElement;
 					if (name && value) calculateWin(name, Number(value));
 				}
 
@@ -55,7 +62,7 @@ function CardProperties({ properties, interactive }: CardPropertiesProps) {
 								data-name={property.name}
 								data-value={property.value}
 								onClick={handleClick}
-								onKeyDown={handleClick}
+								onKeyDown={handleKey}
 							>
 								<span>{property.name}</span>
 								<span>{property.value}</span>

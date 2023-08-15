@@ -1,4 +1,4 @@
-import { animals, decks, messages } from '../store';
+import { availableMessages, animals, decks, messages } from '../store';
 
 import shuffle from './shuffle';
 
@@ -17,7 +17,8 @@ export function initialiseGame() {
 	const humanDeck = shuffled.slice(len / 2, len);
 	decks.value.computer = computerDeck;
 	decks.value.human = humanDeck;
-	updateMessageBox('Human player to start -->');
+	updateMessageBox(availableMessages.peek().humanstart);
+	updateMessageBox(availableMessages.peek().clickstat);
 }
 
 export function calculateWin(name: string, value: number) {
