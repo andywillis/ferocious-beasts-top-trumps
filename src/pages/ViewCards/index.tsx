@@ -1,7 +1,7 @@
 import Card from '../../components/Card';
 import Grid from '../../components/Grid';
 
-import { AnimalType } from '../../types';
+import { CardType } from '../../types';
 
 import sortAnimals from '../../helpers/sortAnimals';
 
@@ -16,7 +16,7 @@ function ViewCards() {
 	return (
 		<main>
 			<Grid>
-				{sortAnimals().map((card: AnimalType, index: number) => {
+				{sortAnimals().map((card: CardType, index: number) => {
 					return (
 						<Card
 							key={card.id}

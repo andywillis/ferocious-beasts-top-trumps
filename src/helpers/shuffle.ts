@@ -1,13 +1,13 @@
-import { AnimalType } from '../types';
+import { CardType } from '../types';
 
 /**
  * Fisher-Yates Shuffle
  * https://stackoverflow.com/a/59837259/1377002
  *
- * @param {AnimalType[]} arr
- * @return {AnimalType[]}
+ * @param {CardType[]} arr
+ * @return {CardType[]}
  */
-function shuffle(arr: AnimalType[]) {
+function shuffle(arr: CardType[]) {
 
 	const arrTemp = structuredClone(arr);
 	let i = arrTemp.length;

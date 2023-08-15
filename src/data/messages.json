@@ -1,0 +1,8 @@
+{
+	"welcome": "Welcome to Ferocious Beasts Top Trumps",
+	"start": "Click a statistic on your card to start the game",
+	"humanwin": "You have won this round",
+	"humanadded": "Your card has been added to the computer's deck",
+	"computerwin": "The computer has won this round.",
+	"computeradded": "Its card has been added to your deck"
+}

@@ -1,26 +1,27 @@
-import { Notice, Card } from '../index';
+import { Status, Card } from '../index';
 
 import { CardType } from '../../types';
 
 import style from './style.module.css';
 
-interface PlayerDeckProps {
+interface DeckProps {
 	type: string;
 	deck: CardType[];
+	interactive?: boolean
 }
 
 /**
- * PlayerDeck
+ * Deck
  *
  * The player (human/computer) deck
  *
- * @param {PlayerDeckProps} { deck }
+ * @param {DeckProps} { deck }
  * @return {React.Element}
  */
-function PlayerDeck({ type, deck }: PlayerDeckProps) {
+function Deck({ type, deck, interactive }: DeckProps) {
 	return (
-		<section className={style.playerDeck}>
-			<Notice notice={`${type} has ${deck.values.length} card(s)`} />
+		<section className={style.deck}>
+			<Status status={`${type} has ${deck.length} card(s)`} />
 			{deck.slice(-1).map((card, index) => {
 				return (
 					<Card
@@ -29,7 +30,7 @@ function PlayerDeck({ type, deck }: PlayerDeckProps) {
 						name={card.name}
 						image={card.image}
 						properties={card.properties}
-						interactive={false}
+						interactive={interactive}
 						count={index}
 					/>
 				);
@@ -39,4 +40,4 @@ function PlayerDeck({ type, deck }: PlayerDeckProps) {
 	);
 }
 
-export default PlayerDeck;
+export default Deck;

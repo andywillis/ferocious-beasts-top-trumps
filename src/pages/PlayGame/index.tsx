@@ -1,6 +1,10 @@
-import { MessageBox, PlayerDeck, Board } from '../../components';
+import { useEffect } from 'react';
+
+import { MessageBox, Deck, Board } from '../../components';
 
 import { decks } from '../../store';
+
+import initialiseGame from '../../helpers/game';
 
 import style from './style.module.css';
 
@@ -12,17 +16,27 @@ import style from './style.module.css';
  * @return {React.Element} PlayGame component/page
  */
 function PlayGame() {
+	
+	useEffect(() => {
+		initialiseGame();
+	}, []);
+	
 	return (
 		<main className={style.main}>
-			<MessageBox sentences={[]} />
+			<MessageBox sentences={[{ id: 0, text: 'Message box' }]} />
 			<Board>
-				<PlayerDeck
+				<Deck
 					type="computer"
 					deck={decks.value.computer}
 				/>
-				<PlayerDeck
+				<Deck
+					type="board"
+					deck={decks.value.board}
+				/>
+				<Deck
 					type="computer"
-					deck={decks.value.computer}
+					deck={decks.value.human}
+					interactive
 				/>
 			</Board>
 		</main>

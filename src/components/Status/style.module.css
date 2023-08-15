@@ -1,0 +1,7 @@
+.status {
+	display: flex;
+	justify-content: center;
+	text-transform: uppercase;
+	font-size: var(--size-rem-08);
+	margin-bottom: var(--size-rem-075);
+}
