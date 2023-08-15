@@ -11,14 +11,15 @@ import style from './style.module.css';
 /**
  * Game
  *
- * Sets up the board for playing
+ * Sets up the board for playing. It comprises a computer deck,
+ * a message box, and a human deck.
  *
  * @return {React.Element} Game component/page
  */
 function Game() {
 	
 	useEffect(() => {
-		if (!deckHuman.value.length) initialiseGame();
+		initialiseGame();
 	}, []);
 	
 	const totalCards = cards.value.length;
@@ -32,11 +33,6 @@ function Game() {
 					deck={deckComputer.value}
 				/>
 				<MessageBox />
-				{/* <Deck
-					type="board"
-					totalCards={totalCards}
-					deck={decks.value.board}
-				/> */}
 				<Deck
 					type="human"
 					totalCards={totalCards}

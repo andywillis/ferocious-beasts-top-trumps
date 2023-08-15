@@ -103,13 +103,13 @@ export function calculateWin(animal: string, name: string, value: number) {
 	if (value > cardComputerDetails.property.value) {
 		winner.value = 'human';
 		updateMessageBox(availableMessages.peek().humanwin);
-		updateMessageBox(`(${toCapitalCase(animal)} beats ${toCapitalCase(cardComputerDetails.name)} on ${name})`);
+		updateMessageBox(`(${toCapitalCase(name)}: ${toCapitalCase(animal)} beats ${toCapitalCase(cardComputerDetails.name)})`);
 	}
 
 	if (cardComputerDetails.property.value > value) {
 		winner.value = 'computer';
 		updateMessageBox(availableMessages.peek().computerwin);
-		updateMessageBox(`(${toCapitalCase(cardComputerDetails.name)} beats ${toCapitalCase(animal)} on ${name})`);
+		updateMessageBox(`(${toCapitalCase(name)}: ${toCapitalCase(cardComputerDetails.name)} beats ${toCapitalCase(animal)})`);
 	}
 
 	if (cardComputerDetails.property.value === value) {
@@ -117,19 +117,13 @@ export function calculateWin(animal: string, name: string, value: number) {
 		updateMessageBox(availableMessages.peek().tie);
 	}
 
-	if (deckComputer.value.length === 0) {
-		updateMessageBox(availableMessages.peek().humanwinner);
-	} else if (deckHuman.value.length === 0) {
-		updateMessageBox(availableMessages.peek().computerwinner);
-	} else {
-		showNextRoundButton.value = true;
-	}
+	showNextRoundButton.value = true;
 
 }
 
-function computerPlay() {
-	// 
-}
+// function computerPlay() {
+// 	//
+// }
 
 /**
  * playNextRound
@@ -190,6 +184,16 @@ export function playNextRound() {
 		deckHuman.value = deckHuman.value.slice(0, -1);
 		updateMessageBox(availableMessages.value.boardadded);
 		updateMessageBox(availableMessages.value.clickstat);
+	}
+
+	if (deckHuman.value.length === cards.value.length) {
+		resetMessageBox();
+		updateMessageBox(availableMessages.peek().humanwinner);
+	}
+	
+	if (deckComputer.value.length === cards.value.length) {
+		resetMessageBox();
+		updateMessageBox(availableMessages.peek().computerwinner);
 	}
 
 }

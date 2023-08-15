@@ -15,33 +15,29 @@
 			margin-left: auto;
 		}
 
-		&.interactive {
-
-			& button {
-				width: 100%;
-				display: flex;
-				text-transform: capitalize;
-				border-radius: 0;
-				background-color: transparent;
-				padding: var(--size-rem-03) 0;
-				font-size: var(--size-rem-13);
-				color: var(--color-gray-dark);
-				border-right: 0;
-				border-bottom: 0;
-				border-left: 0;
-				font-family: inherit;
-				
-				& span:nth-child(2) {
-					margin-left: auto;
-				}
-
-				&:hover {
-					cursor: pointer;
-					background-color: var(--color-blue-light);
-				}
-	
+		& button {
+			width: 100%;
+			display: flex;
+			text-transform: capitalize;
+			border-radius: 0;
+			background-color: transparent;
+			padding: var(--size-rem-03) 0;
+			font-size: var(--size-rem-13);
+			color: var(--color-gray-dark);
+			border-right: 0;
+			border-bottom: 0;
+			border-left: 0;
+			font-family: inherit;
+			
+			& span:nth-child(2) {
+				margin-left: auto;
 			}
-	
+
+			&:hover:not(:disabled) {
+				cursor: pointer;
+				background-color: var(--color-blue-light);
+			}
+
 		}
 	
 	}
@@ -53,7 +49,7 @@
 		& .property {
 			font-size: var(--size-rem-09);
 
-			&.interactive {
+			/* &.interactive { */
 				/* padding: 0; */
 
 				& button {
@@ -61,12 +57,12 @@
 					padding: var(--size-rem-0285) 0;
 					font-size: var(--size-rem-09);
 				
-				&:active {
-					border: 0;
-				}
+					&:active {
+						border: 0;
+					}
 
 				}
-			}
+			/* } */
 		}
 	}
 }
