@@ -1,0 +1,642 @@
+[
+	{
+		"id": 1,
+		"name": "bear",
+		"image": {
+			"name": "bear.webp",
+			"alt": "Photo of a Brown Bear"
+		},
+		"properties": [
+			{ "id": 1, "name": "aggression", "value": 7 },
+			{ "id": 2, "name": "fluffiness", "value": 4 },
+			{ "id": 3, "name": "size", "value": 8 },
+			{ "id": 4, "name": "speed", "value": 6 },
+			{ "id": 5, "name": "stealth", "value": 2 },
+			{ "id": 6, "name": "strength", "value": 8 }
+		]
+	},
+	{
+		"id": 2,
+		"name": "eagle",
+		"image": {
+			"name": "eagle.webp",
+			"alt": "Photo of a Bald Eagle"
+		},
+		"properties": [
+			{ "id": 1, "name": "aggression", "value": 3 },
+			{ "id": 2, "name": "fluffiness", "value": 2 },
+			{ "id": 3, "name": "size", "value": 5 },
+			{ "id": 4, "name": "speed", "value": 8 },
+			{ "id": 5, "name": "stealth", "value": 8 },
+			{ "id": 6, "name": "strength", "value": 5 }
+		]
+	},
+	{
+		"id": 3,
+		"name": "cheetah",
+		"image": {
+			"name": "cheetah.webp",
+			"alt": "Photo of a cheetah"
+		},
+		"properties": [
+			{ "id": 1, "name": "aggression", "value": 5 },
+			{ "id": 2, "name": "fluffiness", "value": 5 },
+			{ "id": 3, "name": "size", "value": 5 },
+			{ "id": 4, "name": "speed", "value": 9 },
+			{ "id": 5, "name": "stealth", "value": 7 },
+			{ "id": 6, "name": "strength", "value": 7 }
+		]
+	},
+	{
+		"id": 4,
+		"name": "red panda",
+		"image": {
+			"name": "red-panda.webp",
+			"alt": "Photo of a Red Panda"
+		},
+		"properties": [
+			{ "id": 1, "name": "aggression", "value": 1 },
+			{ "id": 2, "name": "fluffiness", "value": 10 },
+			{ "id": 3, "name": "size", "value": 3 },
+			{ "id": 4, "name": "speed", "value": 2 },
+			{ "id": 5, "name": "stealth", "value": 5 },
+			{ "id": 6, "name": "strength", "value": 3 }
+		]
+	},
+	{
+		"id": 5,
+		"name": "spider",
+		"image": {
+			"name": "spider.webp",
+			"alt": "Extreme close-up photo of a Jumping Spider"
+		},
+		"properties": [
+			{ "id": 1, "name": "aggression", "value": 2 },
+			{ "id": 2, "name": "fluffiness", "value": 1 },
+			{ "id": 3, "name": "size", "value": 1 },
+			{ "id": 4, "name": "speed", "value": 7 },
+			{ "id": 5, "name": "stealth", "value": 9 },
+			{ "id": 6, "name": "strength", "value": 4 }
+		]
+	},
+	{
+		"id": 6,
+		"name": "shark",
+		"image": {
+			"name": "shark.webp",
+			"alt": "Photo of a Great White Shark"
+		},
+		"properties": [
+			{ "id": 1, "name": "aggression", "value": 10 },
+			{ "id": 2, "name": "fluffiness", "value": 1 },
+			{ "id": 3, "name": "size", "value": 6 },
+			{ "id": 4, "name": "speed", "value": 8 },
+			{ "id": 5, "name": "stealth", "value": 8 },
+			{ "id": 6, "name": "strength", "value": 8 }
+		]
+	},
+	{
+		"id": 7,
+		"name": "praying mantis",
+		"image": {
+			"name": "praying-mantis.webp",
+			"alt": "Photo of a Praying Mantis"
+		},
+		"properties": [
+			{ "id": 1, "name": "aggression", "value": 6 },
+			{ "id": 2, "name": "fluffiness", "value": 1 },
+			{ "id": 3, "name": "size", "value": 2 },
+			{ "id": 4, "name": "speed", "value": 3 },
+			{ "id": 5, "name": "stealth", "value": 7 },
+			{ "id": 6, "name": "strength", "value": 3 }
+		]
+	},
+	{
+		"id": 8,
+		"name": "polar bear",
+		"image": {
+			"name": "polar-bear.webp",
+			"alt": "Photo of a Polar Bear"
+		},
+		"properties": [
+			{ "id": 1, "name": "aggression", "value": 8 },
+			{ "id": 2, "name": "fluffiness", "value": 7 },
+			{ "id": 3, "name": "size", "value": 9 },
+			{ "id": 4, "name": "speed", "value": 7 },
+			{ "id": 5, "name": "stealth", "value": 6 },
+			{ "id": 6, "name": "strength", "value": 10 }
+		]
+	},
+	{
+		"id": 9,
+		"name": "fox",
+		"image": {
+			"name": "fox.webp",
+			"alt": "Photo of a fox"
+		},
+		"properties": [
+			{ "id": 1, "name": "aggression", "value": 3 },
+			{ "id": 2, "name": "fluffiness", "value": 5 },
+			{ "id": 3, "name": "size", "value": 4 },
+			{ "id": 4, "name": "speed", "value": 4 },
+			{ "id": 5, "name": "stealth", "value": 6 },
+			{ "id": 6, "name": "strength", "value": 3 }
+		]
+	},
+	{
+		"id": 10,
+		"name": "hippopotamus",
+		"image": {
+			"name": "hippopotamus.webp",
+			"alt": "Photo of a hippopotamus"
+		},
+		"properties": [
+			{ "id": 1, "name": "aggression", "value": 9 },
+			{ "id": 2, "name": "fluffiness", "value": 1 },
+			{ "id": 3, "name": "size", "value": 8 },
+			{ "id": 4, "name": "speed", "value": 7 },
+			{ "id": 5, "name": "stealth", "value": 6 },
+			{ "id": 6, "name": "strength", "value": 9 }
+		]
+	},
+	{
+		"id": 11,
+		"name": "snake",
+		"image": {
+			"name": "white-lipped-island-pit-viper.webp",
+			"alt": "Photo of a White-Lipped Island Pit Viper"
+		},
+		"properties": [
+			{ "id": 1, "name": "aggression", "value": 8 },
+			{ "id": 2, "name": "fluffiness", "value": 1 },
+			{ "id": 3, "name": "size", "value": 2 },
+			{ "id": 4, "name": "speed", "value": 6 },
+			{ "id": 5, "name": "stealth", "value": 9 },
+			{ "id": 6, "name": "strength", "value": 4 }
+		]
+	},
+	{
+		"id": 12,
+		"name": "owl",
+		"image": {
+			"name": "owl.webp",
+			"alt": "Photo of a White Owl"
+		},
+		"properties": [
+			{ "id": 1, "name": "aggression", "value": 2 },
+			{ "id": 2, "name": "fluffiness", "value": 8 },
+			{ "id": 3, "name": "size", "value": 3 },
+			{ "id": 4, "name": "speed", "value": 7 },
+			{ "id": 5, "name": "stealth", "value": 10 },
+			{ "id": 6, "name": "strength", "value": 2 }
+		]
+	},
+	{
+		"id": 13,
+		"name": "scorpion",
+		"image": {
+			"name": "scorpion.webp",
+			"alt": "Photo of a scorpion"
+		},
+		"properties": [
+			{ "id": 1, "name": "aggression", "value": 9 },
+			{ "id": 2, "name": "fluffiness", "value": 1 },
+			{ "id": 3, "name": "size", "value": 1 },
+			{ "id": 4, "name": "speed", "value": 2 },
+			{ "id": 5, "name": "stealth", "value": 6 },
+			{ "id": 6, "name": "strength", "value": 3 }
+		]
+	},
+	{
+		"id": 14,
+		"name": "sloth",
+		"image": {
+			"name": "sloth.webp",
+			"alt": "Photo of a happy sloth"
+		},
+		"properties": [
+			{ "id": 1, "name": "aggression", "value": 1 },
+			{ "id": 2, "name": "fluffiness", "value": 7 },
+			{ "id": 3, "name": "size", "value": 4 },
+			{ "id": 4, "name": "speed", "value": 1 },
+			{ "id": 5, "name": "stealth", "value": 1 },
+			{ "id": 6, "name": "strength", "value": 3 }
+		]
+	},
+	{
+		"id": 15,
+		"name": "koala",
+		"image": {
+			"name": "koala.webp",
+			"alt": "Photo of a koala"
+		},
+		"properties": [
+			{ "id": 1, "name": "aggression", "value": 2 },
+			{ "id": 2, "name": "fluffiness", "value": 4 },
+			{ "id": 3, "name": "size", "value": 2 },
+			{ "id": 4, "name": "speed", "value": 2 },
+			{ "id": 5, "name": "stealth", "value": 2 },
+			{ "id": 6, "name": "strength", "value": 2 }
+		]
+	},
+	{
+		"id": 16,
+		"name": "piranha",
+		"image": {
+			"name": "piranha.webp",
+			"alt": "Photo of a piranha"
+		},
+		"properties": [
+			{ "id": 1, "name": "aggression", "value": 10 },
+			{ "id": 2, "name": "fluffiness", "value": 1 },
+			{ "id": 3, "name": "size", "value": 2 },
+			{ "id": 4, "name": "speed", "value": 8 },
+			{ "id": 5, "name": "stealth", "value": 7 },
+			{ "id": 6, "name": "strength", "value": 3 }
+		]
+	},
+	{
+		"id": 17,
+		"name": "parrot",
+		"image": {
+			"name": "parrot.webp",
+			"alt": "Photo of a parrot"
+		},
+		"properties": [
+			{ "id": 1, "name": "aggression", "value": 2 },
+			{ "id": 2, "name": "fluffiness", "value": 5 },
+			{ "id": 3, "name": "size", "value": 4 },
+			{ "id": 4, "name": "speed", "value": 7 },
+			{ "id": 5, "name": "stealth", "value": 3 },
+			{ "id": 6, "name": "strength", "value": 2 }
+		]
+	},
+	{
+		"id": 18,
+		"name": "crocodile",
+		"image": {
+			"name": "crocodile.webp",
+			"alt": "Photo of a crocodile"
+		},
+		"properties": [
+			{ "id": 1, "name": "aggression", "value": 9 },
+			{ "id": 2, "name": "fluffiness", "value": 1 },
+			{ "id": 3, "name": "size", "value": 8 },
+			{ "id": 4, "name": "speed", "value": 7 },
+			{ "id": 5, "name": "stealth", "value": 7 },
+			{ "id": 6, "name": "strength", "value": 9 }
+		]
+	},
+	{
+		"id": 19,
+		"name": "lion",
+		"image": {
+			"name": "lion.webp",
+			"alt": "Photo of a lion yawning"
+		},
+		"properties": [
+			{ "id": 1, "name": "aggression", "value": 8 },
+			{ "id": 2, "name": "fluffiness", "value": 6 },
+			{ "id": 3, "name": "size", "value": 6 },
+			{ "id": 4, "name": "speed", "value": 6 },
+			{ "id": 5, "name": "stealth", "value": 7 },
+			{ "id": 6, "name": "strength", "value": 7 }
+		]
+	},
+	{
+		"id": 20,
+		"name": "kangaroo",
+		"image": {
+			"name": "kangaroo.webp",
+			"alt": "Photo of a kangaroo"
+		},
+		"properties": [
+			{ "id": 1, "name": "aggression", "value": 6 },
+			{ "id": 2, "name": "fluffiness", "value": 2 },
+			{ "id": 3, "name": "size", "value": 7 },
+			{ "id": 4, "name": "speed", "value": 7 },
+			{ "id": 5, "name": "stealth", "value": 1 },
+			{ "id": 6, "name": "strength", "value": 7 }
+		]
+	},
+	{
+		"id": 21,
+		"name": "capybara",
+		"image": {
+			"name": "capybara.webp",
+			"alt": "Photo of a capybara soaking in a pond with a citrus fruit on its head"
+		},
+		"properties": [
+			{ "id": 1, "name": "aggression", "value": 1 },
+			{ "id": 2, "name": "fluffiness", "value": 7 },
+			{ "id": 3, "name": "size", "value": 5 },
+			{ "id": 4, "name": "speed", "value": 3 },
+			{ "id": 5, "name": "stealth", "value": 1 },
+			{ "id": 6, "name": "strength", "value": 3 }
+		]
+	},
+	{
+		"id": 22,
+		"name": "zebra",
+		"image": {
+			"name": "zebra.webp",
+			"alt": "Photo of a zebra"
+		},
+		"properties": [
+			{ "id": 1, "name": "aggression", "value": 3 },
+			{ "id": 2, "name": "fluffiness", "value": 3 },
+			{ "id": 3, "name": "size", "value": 5 },
+			{ "id": 4, "name": "speed", "value": 7 },
+			{ "id": 5, "name": "stealth", "value": 2 },
+			{ "id": 6, "name": "strength", "value": 2 }
+		]
+	},
+	{
+		"id": 23,
+		"name": "elephant",
+		"image": {
+			"name": "elephant.webp",
+			"alt": "Photo of a elephant"
+		},
+		"properties": [
+			{ "id": 1, "name": "aggression", "value": 7 },
+			{ "id": 2, "name": "fluffiness", "value": 2 },
+			{ "id": 3, "name": "size", "value": 9 },
+			{ "id": 4, "name": "speed", "value": 6 },
+			{ "id": 5, "name": "stealth", "value": 1 },
+			{ "id": 6, "name": "strength", "value": 9 }
+		]
+	},
+	{
+		"id": 24,
+		"name": "chimpanzee",
+		"image": {
+			"name": "chimpanzee.webp",
+			"alt": "Photo of a chimpanzee"
+		},
+		"properties": [
+			{ "id": 1, "name": "aggression", "value": 7 },
+			{ "id": 2, "name": "fluffiness", "value": 2 },
+			{ "id": 3, "name": "size", "value": 4 },
+			{ "id": 4, "name": "speed", "value": 6 },
+			{ "id": 5, "name": "stealth", "value": 3 },
+			{ "id": 6, "name": "strength", "value": 6 }
+		]
+	},
+	{
+		"id": 25,
+		"name": "chicken",
+		"image": {
+			"name": "chicken.webp",
+			"alt": "Photo of a chicken prancing"
+		},
+		"properties": [
+			{ "id": 1, "name": "aggression", "value": 5 },
+			{ "id": 2, "name": "fluffiness", "value": 2 },
+			{ "id": 3, "name": "size", "value": 2 },
+			{ "id": 4, "name": "speed", "value": 2 },
+			{ "id": 5, "name": "stealth", "value": 1 },
+			{ "id": 6, "name": "strength", "value": 1 }
+		]
+	},
+	{
+		"id": 26,
+		"name": "domestic cat",
+		"image": {
+			"name": "domestic-cat.webp",
+			"alt": "Photo of an adorable kitten"
+		},
+		"properties": [
+			{ "id": 1, "name": "aggression", "value": 7 },
+			{ "id": 2, "name": "fluffiness", "value": 10 },
+			{ "id": 3, "name": "size", "value": 3 },
+			{ "id": 4, "name": "speed", "value": 7 },
+			{ "id": 5, "name": "stealth", "value": 8 },
+			{ "id": 6, "name": "strength", "value": 3 }
+		]
+	},
+	{
+		"id": 27,
+		"name": "otter",
+		"image": {
+			"name": "otter.webp",
+			"alt": "Photo of a otter"
+		},
+		"properties": [
+			{ "id": 1, "name": "aggression", "value": 2 },
+			{ "id": 2, "name": "fluffiness", "value": 9 },
+			{ "id": 3, "name": "size", "value": 3 },
+			{ "id": 4, "name": "speed", "value": 6 },
+			{ "id": 5, "name": "stealth", "value": 7 },
+			{ "id": 6, "name": "strength", "value": 5 }
+		]
+	},
+	{
+		"id": 28,
+		"name": "quokka",
+		"image": {
+			"name": "quokka.webp",
+			"alt": "Photo of a happy quokka"
+		},
+		"properties": [
+			{ "id": 1, "name": "aggression", "value": 1 },
+			{ "id": 2, "name": "fluffiness", "value": 10 },
+			{ "id": 3, "name": "size", "value": 3 },
+			{ "id": 4, "name": "speed", "value": 3 },
+			{ "id": 5, "name": "stealth", "value": 2 },
+			{ "id": 6, "name": "strength", "value": 2 }
+		]
+	},
+	{
+		"id": 29,
+		"name": "fennec fox",
+		"image": {
+			"name": "fennec-fox.webp",
+			"alt": "Photo of a Fennec Fox"
+		},
+		"properties": [
+			{ "id": 1, "name": "aggression", "value": 2 },
+			{ "id": 2, "name": "fluffiness", "value": 9 },
+			{ "id": 3, "name": "size", "value": 2 },
+			{ "id": 4, "name": "speed", "value": 7 },
+			{ "id": 5, "name": "stealth", "value": 7 },
+			{ "id": 6, "name": "strength", "value": 2 }
+		]
+	},
+	{
+		"id": 30,
+		"name": "bison",
+		"image": {
+			"name": "bison.webp",
+			"alt": "Photo of a bison"
+		},
+		"properties": [
+			{ "id": 1, "name": "aggression", "value": 6 },
+			{ "id": 2, "name": "fluffiness", "value": 6 },
+			{ "id": 3, "name": "size", "value": 9 },
+			{ "id": 4, "name": "speed", "value": 5 },
+			{ "id": 5, "name": "stealth", "value": 1 },
+			{ "id": 6, "name": "strength", "value": 9 }
+		]
+	},
+	{
+		"id": 31,
+		"name": "yak",
+		"image": {
+			"name": "yak.webp",
+			"alt": "Photo of a yak"
+		},
+		"properties": [
+			{ "id": 1, "name": "aggression", "value": 6 },
+			{ "id": 2, "name": "fluffiness", "value": 7 },
+			{ "id": 3, "name": "size", "value": 9 },
+			{ "id": 4, "name": "speed", "value": 4 },
+			{ "id": 5, "name": "stealth", "value": 1 },
+			{ "id": 6, "name": "strength", "value": 8 }
+		]
+	},
+	{
+		"id": 32,
+		"name": "margay",
+		"image": {
+			"name": "margay.webp",
+			"alt": "Photo of a margay"
+		},
+		"properties": [
+			{ "id": 1, "name": "aggression", "value": 2 },
+			{ "id": 2, "name": "fluffiness", "value": 9 },
+			{ "id": 3, "name": "size", "value": 3 },
+			{ "id": 4, "name": "speed", "value": 5 },
+			{ "id": 5, "name": "stealth", "value": 7 },
+			{ "id": 6, "name": "strength", "value": 3 }
+		]
+	},
+	{
+		"id": 33,
+		"name": "elephant shrew",
+		"image": {
+			"name": "elephant-shrew.webp",
+			"alt": "Photo of an Elephant Shrew"
+		},
+		"properties": [
+			{ "id": 1, "name": "aggression", "value": 1 },
+			{ "id": 2, "name": "fluffiness", "value": 7 },
+			{ "id": 3, "name": "size", "value": 1 },
+			{ "id": 4, "name": "speed", "value": 5 },
+			{ "id": 5, "name": "stealth", "value": 8 },
+			{ "id": 6, "name": "strength", "value": 1 }
+		]
+	},
+	{
+		"id": 34,
+		"name": "pallas cat",
+		"image": {
+			"name": "pallas-cat.webp",
+			"alt": "Photo of a Pallas Cat"
+		},
+		"properties": [
+			{ "id": 1, "name": "aggression", "value": 2 },
+			{ "id": 2, "name": "fluffiness", "value": 10 },
+			{ "id": 3, "name": "size", "value": 5 },
+			{ "id": 4, "name": "speed", "value": 6 },
+			{ "id": 5, "name": "stealth", "value": 8 },
+			{ "id": 6, "name": "strength", "value": 5 }
+		]
+	},
+	{
+		"id": 35,
+		"name": "crow",
+		"image": {
+			"name": "crow.webp",
+			"alt": "Photo of a crow"
+		},
+		"properties": [
+			{ "id": 1, "name": "aggression", "value": 6 },
+			{ "id": 2, "name": "fluffiness", "value": 6 },
+			{ "id": 3, "name": "size", "value": 2 },
+			{ "id": 4, "name": "speed", "value": 9 },
+			{ "id": 5, "name": "stealth", "value": 7 },
+			{ "id": 6, "name": "strength", "value": 2 }
+		]
+	},
+	{
+		"id": 36,
+		"name": "panda",
+		"image": {
+			"name": "panda.webp",
+			"alt": "Photo of a panda"
+		},
+		"properties": [
+			{ "id": 1, "name": "aggression", "value": 6 },
+			{ "id": 2, "name": "fluffiness", "value": 9 },
+			{ "id": 3, "name": "size", "value": 9 },
+			{ "id": 4, "name": "speed", "value": 3 },
+			{ "id": 5, "name": "stealth", "value": 2 },
+			{ "id": 6, "name": "strength", "value": 7 }
+		]
+	},
+	{
+		"id": 37,
+		"name": "honey badger",
+		"image": {
+			"name": "honey-badger.webp",
+			"alt": "Photo of a Honey Badger"
+		},
+		"properties": [
+			{ "id": 1, "name": "aggression", "value": 10 },
+			{ "id": 2, "name": "fluffiness", "value": 3 },
+			{ "id": 3, "name": "size", "value": 5 },
+			{ "id": 4, "name": "speed", "value": 8 },
+			{ "id": 5, "name": "stealth", "value": 5 },
+			{ "id": 6, "name": "strength", "value": 9 }
+		]
+	},
+	{
+		"id": 38,
+		"name": "chameleon",
+		"image": {
+			"name": "chameleon.webp",
+			"alt": "Photo of a chameleon"
+		},
+		"properties": [
+			{ "id": 1, "name": "aggression", "value": 1 },
+			{ "id": 2, "name": "fluffiness", "value": 5 },
+			{ "id": 3, "name": "size", "value": 2 },
+			{ "id": 4, "name": "speed", "value": 2 },
+			{ "id": 5, "name": "stealth", "value": 2 },
+			{ "id": 6, "name": "strength", "value": 2 }
+		]
+	},
+	{
+		"id": 39,
+		"name": "ostrich",
+		"image": {
+			"name": "ostrich.webp",
+			"alt": "Photo of a ostrich"
+		},
+		"properties": [
+			{ "id": 1, "name": "aggression", "value": 7 },
+			{ "id": 2, "name": "fluffiness", "value": 3 },
+			{ "id": 3, "name": "size", "value": 8 },
+			{ "id": 4, "name": "speed", "value": 7 },
+			{ "id": 5, "name": "stealth", "value": 1 },
+			{ "id": 6, "name": "strength", "value": 6 }
+		]
+	},
+	{
+		"id": 40,
+		"name": "bat",
+		"image": {
+			"name": "bat.webp",
+			"alt": "Photo of a Flying Gray Long-Eared Bat"
+		},
+		"properties": [
+			{ "id": 1, "name": "aggression", "value": 1 },
+			{ "id": 2, "name": "fluffiness", "value": 5 },
+			{ "id": 3, "name": "size", "value": 2 },
+			{ "id": 4, "name": "speed", "value": 7 },
+			{ "id": 5, "name": "stealth", "value": 9 },
+			{ "id": 6, "name": "strength", "value": 4 }
+		]
+	}
+]

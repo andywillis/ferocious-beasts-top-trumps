@@ -1,13 +1,19 @@
+.container {
+	border: var(--size-px-01) solid var(--color-gray-dark);
+	border-radius: var(--size-px-05);
+}
+
 .card {
 	display: flex;
-	min-height: 100%;
+	/* min-height: 100%; */
 	width: 250px;
 	height: fit-content;
 	flex-direction: column;
-	border: var(--size-px-01) solid var(--color-gray-dark);
+	/* border: var(--size-px-01) solid var(--color-gray-dark); */
+	/* border-radius: var(--size-px-05); */
 	padding: var(--size-rem-05);
-	border-radius: var(--size-px-05);
 	background-color: var(--color-gray-light-70);
+	transition: opacity 0.5s;
 	
 	&.interactive {
 		&:hover {
@@ -34,9 +40,13 @@
 
 }
 
+.card.invisible {
+	opacity: 0;
+}
+
 @media (min-width: 721px) {
 	.card {
-		padding: var(--size-rem-025);
+		padding: var(--size-rem-025) var(--size-rem-025) 0 var(--size-rem-025);
 		& .name {
 			& h2 {
 				font-size: var(--size-rem-11);

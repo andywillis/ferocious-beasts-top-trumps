@@ -24,7 +24,7 @@
 				border-radius: 0;
 				background-color: transparent;
 				padding: var(--size-rem-03) 0;
-				font-size: var(--size-rem-09);
+				font-size: var(--size-rem-13);
 				color: var(--color-gray-dark);
 				border-right: 0;
 				border-bottom: 0;
@@ -52,6 +52,14 @@
 	.properties {
 		& .property {
 			font-size: var(--size-rem-09);
+
+			&.interactive {
+
+				& button {
+					padding: var(--size-rem-023);
+					font-size: var(--size-rem-087);
+				}
+			}
 		}
 	}
 }

@@ -1,8 +1,13 @@
+import { SyntheticEvent, KeyboardEvent } from 'react';
+
 import { PropertyType } from '../../../types';
+
+import { calculateWin } from '../../../helpers/game';
 
 import style from './style.module.css';
 
 interface CardPropertiesProps {
+	animal: string;
 	properties: PropertyType[];
 	interactive: boolean;
 }
@@ -28,11 +33,24 @@ function sortPropertiesbyName(a: PropertyType, b: PropertyType) {
  * @param {CardPropertiesProps} { properties, interactive }
  * @return {React.Element} CardProperties component
  */
-function CardProperties({ properties, interactive }: CardPropertiesProps) {
+function CardProperties({ animal, properties, interactive }: CardPropertiesProps) {
+	
+	function handleKey(e: KeyboardEvent) {
+		if (e.key === 'Enter') {
+			const { dataset: { name, value } } = e.target as HTMLButtonElement;
+			if (name && value) calculateWin(animal, name, Number(value));
+		}
+	}
+
+	function handleClick(e: SyntheticEvent) {
+		const { dataset: { name, value } } = e.currentTarget as HTMLButtonElement;
+		if (name && value) calculateWin(animal, name, Number(value));
+	}
+	
 	return (
 		<ul className={style.properties}>
 			{properties.sort(sortPropertiesbyName).map((property: PropertyType) => {
-				
+
 				const cn = [
 					style.property,
 					interactive && style.interactive
@@ -41,7 +59,13 @@ function CardProperties({ properties, interactive }: CardPropertiesProps) {
 				if (interactive) {
 					return (
 						<li key={property.id} className={cn}>
-							<button type="button">
+							<button
+								type="button"
+								data-name={property.name}
+								data-value={property.value}
+								onClick={handleClick}
+								onKeyDown={handleKey}
+							>
 								<span>{property.name}</span>
 								<span>{property.value}</span>
 							</button>

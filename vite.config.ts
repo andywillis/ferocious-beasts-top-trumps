@@ -10,6 +10,7 @@ export default defineConfig({
 		compress()
 	],
 	root: 'src',
+	publicDir: './public',
 	css: {
 		postcss: {
 			plugins: [
@@ -24,7 +25,7 @@ export default defineConfig({
 	build: {
 		target: 'esnext',
 		emptyOutDir: true,
-		outDir: './build',
+		outDir: '../build',
 		sourcemap: true
 	}
 });

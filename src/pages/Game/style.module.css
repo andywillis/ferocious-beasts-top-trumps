@@ -1,0 +1,14 @@
+.main {
+	display: flex;
+	flex-direction: column;
+	justify-items: center;
+	margin: var(--size-rem-1);
+	padding: var(--size-rem-2) var(--size-rem-1);
+}
+
+@media (min-width: 721px) {
+	.main {
+		margin: var(--size-rem-1) var(--size-rem-4);
+		padding: var(--size-rem-2) var(--size-rem-1);
+	}
+}

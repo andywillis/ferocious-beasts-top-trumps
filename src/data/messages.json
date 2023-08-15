@@ -1,0 +1,15 @@
+{
+	"welcome": "Welcome to Ferocious Beasts Top Trumps",
+	"humanplay": "Human player to play",
+	"computerplay": "Computer has played its hand",
+	"clickstat": "Click a statistic ➔",
+	"computerstart": "Computer player to start",	
+	"humanwin": "You have won this round",
+	"humanadded": "The computer's card has been added to your deck",
+	"computerwin": "The computer has won this round",
+	"computeradded": "Your card has been added to the computer's deck",
+	"tie": "This round is a tie. Both cards have been added to the board",
+	"boardadded": "Both cards has been added to the board",
+	"humanwinner": "Congratulations! You have won all the cards!",
+	"computerwinner": "Commiserations! The computer has won all the cards!"
+}

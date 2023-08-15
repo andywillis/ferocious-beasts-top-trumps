@@ -21,33 +21,43 @@ function Card(props: CardType) {
 	const {
 		name,
 		image,
+		visible = true,
 		properties,
 		interactive = false,
-		count
+		// count
 	} = props;
 
-	const cn = [
+	const containerCn = [
+		style.container
+	].join(' ');
+
+	const cardCn = [
 		style.card,
+		!visible && style.invisible,
 		interactive && style.interactive
 	].join(' ');
 	
 	return (
-		<section className={cn}>
+		<section className={containerCn}>
+			<section className={cardCn}>
+				
+				<header className={style.name}>
+					<h2>{name}</h2>
+				</header>
 
-			<header className={style.name}>
-				<h2>{name}</h2>
-			</header>
+				<CardImage
+					src={`images/${image.name}`}
+					alt={image.alt}
+					// count={count}
+				/>
 
-			<CardImage
-				src={`assets/images/${image.name}`}
-				alt={image.alt}
-				count={count}
-			/>
+				<CardProperties
+					animal={name}
+					properties={properties}
+					interactive={interactive}
+				/>
 
-			<CardProperties
-				properties={properties}
-				interactive={interactive}
-			/>
+			</section>
 
 		</section>
 	);
