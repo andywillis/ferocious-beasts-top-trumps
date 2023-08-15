@@ -5,6 +5,7 @@ import {
 	computerCardVisible,
 	deckComputer,
 	deckHuman,
+	deckBoard,
 	showNextRoundButton,
 	messages,
 	winner
@@ -128,22 +129,43 @@ export function playNextRound() {
 	resetMessageBox();
 
 	if (winner.value === 'human') {
-		const computerCard = deckComputer.value.pop() as CardType;
-		const humanCard = deckHuman.value.pop() as CardType;
-		deckHuman.value = [ humanCard, computerCard, ...deckHuman.peek() ];
+		const computerCard = deckComputer.value.at(-1) as CardType;
+		const humanCard = deckHuman.value.at(-1) as CardType;
+		deckHuman.value = [
+			humanCard,
+			computerCard,
+			...deckBoard.value,
+			...deckHuman.value.slice(0, -1)
+		];
+		deckComputer.value = deckComputer.value.slice(0, -1);
+		deckBoard.value = [];
 		updateMessageBox(availableMessages.value.humanadded);
 		updateMessageBox(availableMessages.value.clickstat);
 	}
 
 	if (winner.value === 'computer') {
-		const humanCard = deckHuman.value.pop() as CardType;
-		const computerCard = deckComputer.value.pop() as CardType;
-		deckComputer.value = [ computerCard, humanCard, ...deckComputer.peek() ];
+		const humanCard = deckHuman.value.at(-1) as CardType;
+		const computerCard = deckComputer.value.at(-1) as CardType;
+		deckComputer.value = [
+			computerCard,
+			humanCard,
+			...deckBoard.value,
+			...deckComputer.value.slice(0, -1)
+		];
+		deckHuman.value = deckHuman.value.slice(0, -1);
+		deckBoard.value = [];
+		updateMessageBox(availableMessages.value.computeradded);
+		updateMessageBox(availableMessages.value.clickstat);
 	}
 
 	if (winner.value === 'tie') {
-		// const computerCard = decks.value.computer.pop() as CardType;
-		// decks.value.human.unshift(computerCard);
+		const computerCard = deckComputer.value.at(-1) as CardType;
+		const humanCard = deckHuman.value.at(-1) as CardType;
+		deckBoard.value = [ humanCard, computerCard, ...deckBoard.value ];
+		deckComputer.value = deckComputer.value.slice(0, -1);
+		deckHuman.value = deckHuman.value.slice(0, -1);
+		updateMessageBox(availableMessages.value.boardadded);
+		updateMessageBox(availableMessages.value.clickstat);
 	}
 
 }

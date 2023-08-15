@@ -10,6 +10,7 @@ export default defineConfig({
 		compress()
 	],
 	root: 'src',
+	publicDir: './public',
 	css: {
 		postcss: {
 			plugins: [

@@ -7,5 +7,6 @@
 	"humanadded": "The computer's card has been added to your deck",
 	"computerwin": "The computer has won this round",
 	"computeradded": "Your card has been added to the computer's deck",
-	"tie": "This round is a tie. Both cards have been added to the board"
+	"tie": "This round is a tie. Both cards have been added to the board",
+	"boardadded": "Both cards has been added to the board"
 }
