@@ -21,4 +21,11 @@ export const decks = signal({
 	human: []
 } as DeckType);
 
+export const currentComputerCard = computed(() => {
+	if (decks.peek().computer.length) {
+		return decks.peek().computer.at(-1);
+	}
+	return undefined;
+});
+
 export const computerCardVisible = signal(false);

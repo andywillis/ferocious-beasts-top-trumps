@@ -21,7 +21,7 @@ function Card(props: CardType) {
 	const {
 		name,
 		image,
-		visible,
+		visible = true,
 		properties,
 		interactive = false,
 		count
