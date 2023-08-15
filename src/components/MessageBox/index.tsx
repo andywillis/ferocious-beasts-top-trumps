@@ -1,10 +1,6 @@
-import { SentenceType } from '../../types';
+import { messages } from '../../store';
 
 import style from './style.module.css';
-
-interface MessageBoxProps {
-	sentences: SentenceType[]
-}
 
 /**
  * MessageBox
@@ -14,11 +10,11 @@ interface MessageBoxProps {
  * @param {MessageBoxProps} { sentences }
  * @return {React.Element}
  */
-function MessageBox({ sentences }: MessageBoxProps) {
+function MessageBox() {
 	return (
 		<section className={style.messageBox}>
-			{sentences.map(sentence => {
-				return <p key={sentence.id}>{sentence.text}</p>;
+			{messages.value.map(message => {
+				return <p key={message.id}>{message.text}</p>;
 			})}
 		</section>
 	);

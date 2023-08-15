@@ -16,8 +16,8 @@ export type CardType = {
 	count?: number
 };
 
-export type SentenceType = {
-	id: number;
+export type MessageType = {
+	id: string;
 	text: string;
 }
 

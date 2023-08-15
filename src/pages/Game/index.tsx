@@ -18,14 +18,14 @@ import style from './style.module.css';
 function Game() {
 	
 	useEffect(() => {
-		initialiseGame();
+		if (!decks.value.human.length) initialiseGame();
 	}, []);
 	
 	const totalCards = animals.peek().length;
 
 	return (
 		<main className={style.main}>
-			<MessageBox sentences={[{ id: 0, text: 'Message box' }]} />
+			<MessageBox />
 			<Board>
 				<Deck
 					type="computer"
