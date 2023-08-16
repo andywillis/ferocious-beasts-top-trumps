@@ -9,7 +9,7 @@
 
 @media (min-width: 721px) {
 	.main {
-		/* margin: 0 var(--size-rem-4); */
+		margin-bottom: var(--size-rem-4);
 		padding: 0 var(--size-rem-1);
 	}
 }

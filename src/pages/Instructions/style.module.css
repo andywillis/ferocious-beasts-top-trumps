@@ -40,7 +40,7 @@
 		margin:
 		var(--size-rem-3)
 		var(--size-rem-4)
-		var(--size-rem-1)
+		var(--size-rem-3)
 		var(--size-rem-4);
 
 		& .step ~ .step {
