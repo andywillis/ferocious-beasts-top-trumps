@@ -7,18 +7,22 @@
 	column-gap: var(--size-rem-2);
 	row-gap: var(--size-rem-3);
 
+	&.onlyOneRow	{
+		max-height: 360px;
+		overflow: hidden;
+	}
+	
 }
 
-.onlyOneRow	{
-	max-height: 360px;
-	overflow: hidden;
-}
-
-
-@media (min-width: 721px) {
+@media (min-width: 1021px) {
 	.grid {
 		margin: var(--size-rem-3);
 		column-gap: var(--size-rem-2);
-		row-gap: var(--size-rem-2);	
+		row-gap: var(--size-rem-2);
+
+		&.onlyOneRow	{
+			max-height: fit-content;
+			overflow: unset;
+		}
 	}
 }
