@@ -6,7 +6,7 @@
 	padding: var(--size-rem-2) var(--size-rem-1);
 
 	& .intro {
-		font-size: var(--size-rem-12);
+		font-size: var(--size-rem-14);
 		justify-content: center;
 		text-align: center;
 	}
@@ -20,7 +20,7 @@
 		align-items: stretch;	
 
 		& .intro {
-			font-size: var(--size-rem-12);
+			font-size: var(--size-rem-1);
 		}
 
 	}
