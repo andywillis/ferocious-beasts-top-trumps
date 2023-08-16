@@ -1,4 +1,5 @@
 .main {
+	/* min-height: calc(100vh - 30px); */
 	margin:
 		var(--size-rem-3)
 		var(--size-rem-2)

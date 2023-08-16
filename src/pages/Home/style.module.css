@@ -2,12 +2,13 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	margin: var(--size-rem-1);
+	margin-top: var(--size-rem-1);
 	padding: var(--size-rem-2) var(--size-rem-1);
 
 	& .intro {
+		font-size: var(--size-rem-12);
 		justify-content: center;
-		text-align: center;			
+		text-align: center;
 	}
 
 }
@@ -17,5 +18,10 @@
 		margin: var(--size-rem-05);
 		padding: var(--size-rem-05) var(--size-rem-1);
 		align-items: stretch;	
+
+		& .intro {
+			font-size: var(--size-rem-12);
+		}
+
 	}
 }

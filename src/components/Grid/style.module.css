@@ -8,6 +8,11 @@
 	row-gap: var(--size-rem-3);
 }
 
+.onlyOneRow	{
+	max-height: 360px;
+	overflow: hidden;
+}
+
 @media (min-width: 721px) {
 	.grid {
 		margin: var(--size-rem-3);

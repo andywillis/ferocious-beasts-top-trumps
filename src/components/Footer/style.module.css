@@ -1,5 +1,6 @@
 .footer {
-  top: 100vh;
+  /* top: 100vh; */
+	height: 30px;
   position: sticky;
 	border-top: var(--size-px-01) solid var(--color-blue-dark);
   text-align: right;

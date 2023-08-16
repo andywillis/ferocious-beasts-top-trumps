@@ -1,6 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
 
-import { Footer, Header } from '../../components';
+import { Header } from '../../components';
 
 import { Game, Home, Instructions, ViewCards } from '../../pages';
 
@@ -19,7 +19,7 @@ function App() {
 				<Route path="/instructions" element={<Instructions />} />
 				<Route path="/viewcards" element={<ViewCards />} />
 			</Routes>
-			<Footer text={`Made by Andy Willis, ${new Date().getFullYear()}`} />
+			{/* <Footer text={`Made by Andy Willis, ${new Date().getFullYear()}`} /> */}
 		</>
 	);
 }

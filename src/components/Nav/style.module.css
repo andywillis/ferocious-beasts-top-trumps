@@ -2,12 +2,12 @@
 	width: 80%;
 	display: flex;
 	justify-content: center;
-	font-size: var(--size-rem-13);
 
 	& ul {
 		width: 100%;
 		display: flex;
 		justify-content: space-between;
+		font-size: var(--size-rem-12);
 
 		& li {
 			display: inline-flex;
@@ -25,7 +25,11 @@
 
 @media (min-width: 721px) {
 	.nav {
-		width: 40%;
-		font-size: var(--size-rem-1);
+		width: 60%;
+
+		& ul {
+			font-size: var(--size-rem-11);
+
+		}
 	}
 }
