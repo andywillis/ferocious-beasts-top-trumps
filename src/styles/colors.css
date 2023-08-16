@@ -6,7 +6,7 @@
 
 :root {
 	
-	--color-shadow: rgba(171, 171, 171, 1);
+	--color-shadow: rgba(171, 171, 171, 0.5);
 
 	--color-red-dark: hsl(var(--red-9-hsl));
 	--color-red-light: hsl(var(--red-9-hsl) / 70%);
@@ -16,6 +16,9 @@
 	--color-sand-light-60: hsl(var(--sand-2-hsl) / 60%);
 	--color-sand-regular: hsl(var(--sand-9-hsl));
 
+	--color-blue-light-40: hsl(var(--blue-1-hsl) / 40%);
+	--color-blue-light-60: hsl(var(--blue-1-hsl) / 60%);
+	--color-blue-light-80: hsl(var(--blue-1-hsl) / 80%);
 	--color-blue-light: hsl(var(--blue-1-hsl));
 	--color-blue-dark: hsl(var(--blue-8-hsl));
 
