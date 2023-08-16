@@ -7,9 +7,20 @@
 	padding: var(--size-rem-2) var(--size-rem-1);
 }
 
-@media (min-width: 721px) {
+@media (min-width: 521px) {
 	.main {
 		margin-bottom: var(--size-rem-4);
+		padding: 0 var(--size-rem-1);
+	}
+}
+
+@media (min-width: 921px) {
+	.main {
+		margin:
+			var(--size-rem-2)
+			var(--size-rem-4)
+			var(--size-rem-4)
+			var(--size-rem-4);
 		padding: 0 var(--size-rem-1);
 	}
 }
