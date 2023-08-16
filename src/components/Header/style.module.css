@@ -19,7 +19,7 @@
 
 @media (min-width: 1121px) {
 	.header {
-		font-size: var(--size-rem-1);
+		font-size: var(--size-rem-09);
 		padding-bottom: var(--size-rem-1);
 
 		& h1 {

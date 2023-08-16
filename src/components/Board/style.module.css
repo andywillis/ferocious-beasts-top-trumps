@@ -9,7 +9,7 @@
 
 @media (min-width: 721px) {
 	.board {
-		margin: var(--size-rem-2) 0;
+		margin: var(--size-rem-1) 0;
 		/* column-gap: var(--size-rem-2); */
 		row-gap: var(--size-rem-2);
 	}

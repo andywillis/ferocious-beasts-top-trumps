@@ -16,7 +16,7 @@
 
 @media (min-width: 721px) {
 	.status {
-		font-size: var(--size-rem-1);
+		font-size: var(--size-rem-09);
 
 		& h3, p {
 			text-align: center;	

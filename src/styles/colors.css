@@ -6,6 +6,8 @@
 
 :root {
 	
+	--color-shadow: rgba(171, 171, 171, 1);
+
 	--color-red-dark: hsl(var(--red-9-hsl));
 	--color-red-light: hsl(var(--red-9-hsl) / 70%);
 	
