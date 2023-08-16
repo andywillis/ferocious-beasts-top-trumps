@@ -21,7 +21,13 @@ function MessageBox() {
 	return (
 		<section className={style.messageBox}>
 			{messages.value.map(message => {
-				return <p key={message.id}>{message.text}</p>;
+
+				const cn = [
+					style.message,
+					message.type === 'underline' && style.underline
+				].join(' ');
+
+				return <p className={cn} key={message.id}>{message.text}</p>;
 			})}
 			{showNextRoundButton.value && (
 				<button

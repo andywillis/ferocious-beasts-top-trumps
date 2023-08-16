@@ -6,10 +6,15 @@
 	margin-bottom: var(--size-rem-05);
 	font-size: var(--size-rem-14);
 
-	& p {
+	& .message {
 		margin: 0;
 		padding: 0;	
 		text-align: center;
+	
+		&.underline {
+			text-decoration: underline;
+		}
+	
 	}
 
 	& .nextRound {

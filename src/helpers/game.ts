@@ -78,8 +78,12 @@ function resetMessageBox() {
  *
  * @param {string} message
  */
-function updateMessageBox(message: string) {
-	messages.value.push({ id: getUUID(), text: message });
+function updateMessageBox(message: string, type?: string) {
+	messages.value.push({
+		id: getUUID(),
+		type,
+		text: message
+	});
 }
 
 /**
@@ -133,19 +137,40 @@ export function calculateWin(animal: string, name: string, value: number, type: 
 		if (value > cardComputerDetails.property.value) {
 			winner.value = 'human';
 			updateMessageBox(availableMessages.peek().humanwin);
-			updateMessageBox(`(${toCapitalCase(name)}: ${toCapitalCase(animal)} beats ${toCapitalCase(cardComputerDetails.name)})`);
+			updateMessageBox(toCapitalCase(name), 'underline');
+			updateMessageBox(`
+				${toCapitalCase(animal)}
+				(${value}) 
+				beats 
+				${toCapitalCase(cardComputerDetails.name)}
+				(${cardComputerDetails.property.value})
+			`);
 		}
 	
 		if (cardComputerDetails.property.value > value) {
 			winner.value = 'computer';
 			updateMessageBox(availableMessages.peek().computerwin);
-			updateMessageBox(`(${toCapitalCase(name)}: ${toCapitalCase(cardComputerDetails.name)} beats ${toCapitalCase(animal)})`);
+			updateMessageBox(toCapitalCase(name), 'underline');
+			updateMessageBox(`
+				${toCapitalCase(cardComputerDetails.name)} 
+				(${cardComputerDetails.property.value})
+				beats 
+				${toCapitalCase(animal)}
+				(${value})
+			`);
 		}
 	
 		if (cardComputerDetails.property.value === value) {
 			winner.value = 'tie';
 			updateMessageBox(availableMessages.peek().tie);
-			updateMessageBox(`(${toCapitalCase(name)}: ${toCapitalCase(cardComputerDetails.name)} matches ${toCapitalCase(animal)})`);
+			updateMessageBox(toCapitalCase(name), 'underline');
+			updateMessageBox(`
+				${toCapitalCase(cardComputerDetails.name)} 
+				(${cardComputerDetails.property.value})
+				matches 
+				${toCapitalCase(animal)}
+				(${value})
+			`);
 		}
 
 		showNextRoundButton.value = true;
@@ -161,19 +186,40 @@ export function calculateWin(animal: string, name: string, value: number, type: 
 		if (value > cardHumanDetails.property.value) {
 			winner.value = 'computer';
 			updateMessageBox(availableMessages.peek().computerwin);
-			updateMessageBox(`(${toCapitalCase(name)}: ${toCapitalCase(animal)} beats ${toCapitalCase(cardHumanDetails.name)})`);
+			updateMessageBox(toCapitalCase(name), 'underline');
+			updateMessageBox(`
+				${toCapitalCase(animal)} 
+				(${value})
+				beats 
+				${toCapitalCase(cardHumanDetails.name)}
+				(${cardHumanDetails.property.value})
+			`);
 		}
 	
 		if (cardHumanDetails.property.value > value) {
 			winner.value = 'human';
 			updateMessageBox(availableMessages.peek().humanwin);
-			updateMessageBox(`(${toCapitalCase(name)}: ${toCapitalCase(cardHumanDetails.name)} beats ${toCapitalCase(animal)})`);
+			updateMessageBox(toCapitalCase(name), 'underline');
+			updateMessageBox(`
+				${toCapitalCase(cardHumanDetails.name)} 
+				(${cardHumanDetails.property.value})
+				beats 
+				${toCapitalCase(animal)}
+				(${value})
+			`);
 		}
 	
 		if (cardHumanDetails.property.value === value) {
 			winner.value = 'tie';
 			updateMessageBox(availableMessages.peek().tie);
-			updateMessageBox(`(${toCapitalCase(name)}: ${toCapitalCase(cardHumanDetails.name)} matches ${toCapitalCase(animal)})`);
+			updateMessageBox(toCapitalCase(name), 'underline');
+			updateMessageBox(`
+				${toCapitalCase(cardHumanDetails.name)} 
+				(${cardHumanDetails.property.value})
+				matches 
+				${toCapitalCase(animal)}
+				(${value})
+			`);
 		}
 
 		showNextRoundButton.value = true;
