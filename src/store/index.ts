@@ -27,3 +27,7 @@ export const sortedCards = computed(() => sortCards(cards.value));
 export const currentComputerCard = computed(() => {
 	return deckComputer.value.at(-1);
 });
+
+export const currentHumanCard = computed(() => {
+	return deckHuman.value.at(-1);
+});

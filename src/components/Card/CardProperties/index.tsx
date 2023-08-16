@@ -38,13 +38,13 @@ function CardProperties({ animal, properties, interactive }: CardPropertiesProps
 	function handleKey(e: KeyboardEvent) {
 		if (e.key === 'Enter') {
 			const { dataset: { name, value } } = e.target as HTMLButtonElement;
-			if (name && value) calculateWin(animal, name, Number(value));
+			if (name && value) calculateWin(animal, name, Number(value), 'human');
 		}
 	}
 
 	function handleClick(e: SyntheticEvent) {
 		const { dataset: { name, value } } = e.currentTarget as HTMLButtonElement;
-		if (name && value) calculateWin(animal, name, Number(value));
+		if (name && value) calculateWin(animal, name, Number(value), 'human');
 	}
 	
 	return (

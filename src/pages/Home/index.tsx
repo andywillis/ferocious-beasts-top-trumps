@@ -4,7 +4,9 @@ import style from './style.module.css';
 import Card from '../../components/Card';
 import Grid from '../../components/Grid';
 
-import { getThreeRandomCards } from '../../helpers/cards';
+import { cards } from '../../store';
+
+import { getRandomCards } from '../../helpers/cards';
 
 /**
  * Home
@@ -18,10 +20,11 @@ function Home() {
 	return (
 		<main className={style.main}>
 			<section className={style.intro}>
-				Ferocious Beasts Top Trumps is a fun card game that can be enjoyed by everyone. The object of the game is to collect all of the cards in the deck by trying to beat the computer in each round.
+				<p>A fun card game for all the family</p>
+				<p>Play against a deadly computer opponent and win all the cards</p>
 			</section>
 			<Grid>
-				{getThreeRandomCards().map((card, index) => {
+				{getRandomCards(cards.peek(), 3).map((card, index) => {
 					return (
 						<Card
 							key={card.id}

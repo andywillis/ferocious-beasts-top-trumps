@@ -1,6 +1,6 @@
 .main {
 	margin:
-		var(--size-rem-1)
+		var(--size-rem-3)
 		var(--size-rem-2)
 		var(--size-rem-2)
 		var(--size-rem-2);
@@ -16,15 +16,19 @@
 
 		& header {
 			font-size: var(--size-rem-12);
-			font-weight: var(--font-weight-6);
+			font-weight: var(--font-weight-6);	
+
+			& h2 {
+				margin: 0;
+				padding: 0;
+			}
 		}
 		
 		& ul {
 
 			& li {
 				text-align: center;
-				margin: var(--size-rem-05);
-				padding-left: var(--size-rem-05);
+				margin: var(--size-rem-1);
 			}
 		}
 	}
@@ -33,7 +37,7 @@
 @media (min-width: 721px) {
 	.main {
 		margin:
-		var(--size-rem-1)
+		var(--size-rem-3)
 		var(--size-rem-4)
 		var(--size-rem-1)
 		var(--size-rem-4);
@@ -44,9 +48,13 @@
 
 		& .step {
 			& header {
-				margin: 0;
-				padding: 0;
-				font-size: var(--size-rem-09);
+
+				& h2 {
+					margin: 0;
+					padding: 0;
+					font-size: var(--size-rem-14);	
+				}
+
 			}
 		}
 	

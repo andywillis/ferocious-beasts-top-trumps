@@ -4,6 +4,7 @@
 	align-items: center;
 	justify-content: center;
 	margin-bottom: var(--size-rem-05);
+	font-size: var(--size-rem-14);
 
 	& p {
 		margin: 0;
@@ -25,6 +26,8 @@
 
 @media (min-width: 721px) {
 	.messageBox {
+		font-size: var(--size-rem-09);
+
 		& .nextRound {
 			font-size: var(--size-rem-09);
 		}
