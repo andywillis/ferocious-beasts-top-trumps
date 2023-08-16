@@ -1,7 +1,7 @@
 .board {
 	display: grid;
 	justify-items: center;
-	margin: var(--size-rem-2) var(--size-rem-1);
+	/* margin: var(--size-rem-2) var(--size-rem-1); */
 	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 	/* column-gap: var(--size-rem-2); */
 	row-gap: var(--size-rem-3);
@@ -9,7 +9,7 @@
 
 @media (min-width: 721px) {
 	.board {
-		/* margin: var(--size-rem-3) 0; */
+		margin: var(--size-rem-2) 0;
 		/* column-gap: var(--size-rem-2); */
 		row-gap: var(--size-rem-2);
 	}
