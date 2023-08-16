@@ -8,8 +8,8 @@
 	font-size: var(--size-rem-14);
 }
 
-@media (min-width: 1121px) {
+@media (min-width: 721px) {
 	.footer {
-		font-size: var(--size-rem-09);
+		font-size: var(--size-rem-1);
 	}
 }
