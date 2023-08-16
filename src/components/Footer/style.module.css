@@ -1,0 +1,15 @@
+.footer {
+  top: 100vh;
+  position: sticky;
+	border-top: var(--size-px-01) solid var(--color-blue-dark);
+  text-align: right;
+  margin-top: 1em;
+  padding: 0.5em;
+	font-size: var(--size-rem-14);
+}
+
+@media (min-width: 1121px) {
+	.footer {
+		font-size: var(--size-rem-09);
+	}
+}

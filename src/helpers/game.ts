@@ -2,6 +2,7 @@ import {
 	availableMessages,
 	cards,
 	currentComputerCard,
+	currentHumanCard,
 	computerCardVisible,
 	humanCardVisible,
 	deckComputer,
@@ -17,7 +18,7 @@ import { CardType } from '../types';
 
 import { toCapitalCase } from './string';
 
-import { shuffleCards } from './cards';
+import { getRandomProperties, shuffleArray } from './cards';
 
 /**
  * getComputerCardValue
@@ -27,6 +28,23 @@ import { shuffleCards } from './cards';
  */
 function getComputerCardDetails(name: string) {
 	const card = currentComputerCard.peek();
+	return {
+		name: card?.name as string,
+		property: {
+			name,
+			value: card?.properties.find(prop => prop.name === name)?.value as number
+		}
+	};
+}
+
+/**
+ * getHumanCardValue
+ *
+ * @param {string} name
+ * @return {number}
+ */
+function getHumanCardDetails(name: string) {
+	const card = currentHumanCard.peek();
 	return {
 		name: card?.name as string,
 		property: {
@@ -66,17 +84,18 @@ function updateMessageBox(message: string) {
 
 /**
  * initialiseGame
- * 
+ *
  * Reset state, update the message box
  *
  * @export
  */
 export function initialiseGame() {
 
-	const shuffled = shuffleCards(cards.peek());
+	const shuffled = shuffleArray(cards.peek()) as CardType[];
 	const len = shuffled.length;
 	deckComputer.value = shuffled.slice(0, len / 2);
 	deckHuman.value = shuffled.slice(len / 2, len);
+	deckBoard.value = [];
 
 	computerCardVisible.value = false;
 	humanCardVisible.value = true;
@@ -100,39 +119,68 @@ export function initialiseGame() {
  * @param {string} name
  * @param {number} value
  */
-export function calculateWin(animal: string, name: string, value: number) {
+export function calculateWin(animal: string, name: string, value: number, type: string) {
 
 	computerCardVisible.value = true;
 	humanCardInteractive.value = false;
 
-	const cardComputerDetails = getComputerCardDetails(name);
-
 	resetMessageBox();
 
-	if (value > cardComputerDetails.property.value) {
-		winner.value = 'human';
-		updateMessageBox(availableMessages.peek().humanwin);
-		updateMessageBox(`(${toCapitalCase(name)}: ${toCapitalCase(animal)} beats ${toCapitalCase(cardComputerDetails.name)})`);
+	if (type === 'human') {
+
+		const cardComputerDetails = getComputerCardDetails(name);
+
+		if (value > cardComputerDetails.property.value) {
+			winner.value = 'human';
+			updateMessageBox(availableMessages.peek().humanwin);
+			updateMessageBox(`(${toCapitalCase(name)}: ${toCapitalCase(animal)} beats ${toCapitalCase(cardComputerDetails.name)})`);
+		}
+	
+		if (cardComputerDetails.property.value > value) {
+			winner.value = 'computer';
+			updateMessageBox(availableMessages.peek().computerwin);
+			updateMessageBox(`(${toCapitalCase(name)}: ${toCapitalCase(cardComputerDetails.name)} beats ${toCapitalCase(animal)})`);
+		}
+	
+		if (cardComputerDetails.property.value === value) {
+			winner.value = 'tie';
+			updateMessageBox(availableMessages.peek().tie);
+			updateMessageBox(`(${toCapitalCase(name)}: ${toCapitalCase(cardComputerDetails.name)} matches ${toCapitalCase(animal)})`);
+		}
+
+		showNextRoundButton.value = true;
+
 	}
 
-	if (cardComputerDetails.property.value > value) {
-		winner.value = 'computer';
-		updateMessageBox(availableMessages.peek().computerwin);
-		updateMessageBox(`(${toCapitalCase(name)}: ${toCapitalCase(cardComputerDetails.name)} beats ${toCapitalCase(animal)})`);
-	}
+	if (type === 'computer') {
 
-	if (cardComputerDetails.property.value === value) {
-		winner.value = 'tie';
-		updateMessageBox(availableMessages.peek().tie);
-	}
+		updateMessageBox('Computer to play. ');
 
-	showNextRoundButton.value = true;
+		const cardHumanDetails = getHumanCardDetails(name);
+
+		if (value > cardHumanDetails.property.value) {
+			winner.value = 'computer';
+			updateMessageBox(availableMessages.peek().computerwin);
+			updateMessageBox(`(${toCapitalCase(name)}: ${toCapitalCase(animal)} beats ${toCapitalCase(cardHumanDetails.name)})`);
+		}
+	
+		if (cardHumanDetails.property.value > value) {
+			winner.value = 'human';
+			updateMessageBox(availableMessages.peek().humanwin);
+			updateMessageBox(`(${toCapitalCase(name)}: ${toCapitalCase(cardHumanDetails.name)} beats ${toCapitalCase(animal)})`);
+		}
+	
+		if (cardHumanDetails.property.value === value) {
+			winner.value = 'tie';
+			updateMessageBox(availableMessages.peek().tie);
+			updateMessageBox(`(${toCapitalCase(name)}: ${toCapitalCase(cardHumanDetails.name)} matches ${toCapitalCase(animal)})`);
+		}
+
+		showNextRoundButton.value = true;
+		
+	}
 
 }
-
-// function computerPlay() {
-// 	//
-// }
 
 /**
  * playNextRound
@@ -150,51 +198,91 @@ export function calculateWin(animal: string, name: string, value: number) {
  */
 export function playNextRound() {
 	
-	computerCardVisible.value = false;
-	showNextRoundButton.value = false;
-	humanCardInteractive.value = true;
-
 	resetMessageBox();
 
 	if (winner.value === 'human') {
+
+		// Update the human deck
 		deckHuman.value = [
 			deckHuman.value.at(-1) as CardType,
 			deckComputer.value.at(-1) as CardType,
 			...deckBoard.value,
 			...deckHuman.value.slice(0, -1)
 		];
+
+		// Update the computer and board decks
 		deckComputer.value = deckComputer.value.slice(0, -1);
 		deckBoard.value = [];
+
+		// Update board state
+		computerCardVisible.value = false;
+		showNextRoundButton.value = false;
+		humanCardInteractive.value = true;
+
+		// Update message box
 		updateMessageBox(availableMessages.value.humanadded);
 		updateMessageBox(availableMessages.value.clickstat);
 	}
 
 	if (winner.value === 'computer') {
+
+		// Update computer deck
 		deckComputer.value = [
 			deckComputer.value.at(-1) as CardType,
 			deckHuman.value.at(-1) as CardType,
 			...deckBoard.value,
 			...deckComputer.value.slice(0, -1)
 		];
+
+		// Update human and board decks
 		deckHuman.value = deckHuman.value.slice(0, -1);
 		deckBoard.value = [];
+
+		// Update board state
+		computerCardVisible.value = true;
+		showNextRoundButton.value = false;
+		humanCardInteractive.value = false;
+
+		// Update message box
 		updateMessageBox(availableMessages.value.computeradded);
 		updateMessageBox(availableMessages.value.computerplay);
-		updateMessageBox(availableMessages.value.clickstat);
+
+		// Since the computer won we need to play its next hand
+		// So we grab the face card, extract a random property
+		// and pass the arguments to the calculateWin function
+		const computerCard = deckComputer.value.at(-1) as CardType;
+		const animal = computerCard.name;
+		const properties = getRandomProperties(computerCard.properties, 1);
+		const { name, value } = properties[0];
+		calculateWin(animal, name, Number(value), 'computer');
 	}
 
 	if (winner.value === 'tie') {
+
+		// Update the board deck
 		deckBoard.value = [
 			deckHuman.value.at(-1) as CardType,
 			deckComputer.value.at(-1) as CardType,
 			...deckBoard.value
 		];
+
+		// Update the computer and human decks
 		deckComputer.value = deckComputer.value.slice(0, -1);
 		deckHuman.value = deckHuman.value.slice(0, -1);
+
+		// Update the board state
+		computerCardVisible.value = false;
+		showNextRoundButton.value = false;
+		humanCardInteractive.value = true;
+
+		// Update the message box
 		updateMessageBox(availableMessages.value.boardadded);
 		updateMessageBox(availableMessages.value.clickstat);
 	}
 
+	// Finally we work out, following all the changes, whether
+	// either the computer or human player has won, and update the
+	// the board accordingly
 	if (deckHuman.value.length === cards.value.length) {
 		computerCardVisible.value = false;
 		humanCardVisible.value = false;

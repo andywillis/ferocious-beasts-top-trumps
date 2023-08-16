@@ -14,6 +14,8 @@
 
 @media (min-width: 721px) {
 	.main {
-		align-items: stretch;
+		margin: var(--size-rem-05);
+		padding: var(--size-rem-05) var(--size-rem-1);
+		align-items: stretch;	
 	}
 }
