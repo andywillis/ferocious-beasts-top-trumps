@@ -17,6 +17,7 @@ export const deckBoard = signal([] as CardType[]);
 export const deckHuman = signal([] as CardType[]);
 export const messages = signal([] as MessageType[]);
 export const computerCardVisible = signal(false);
+export const humanCardVisible = signal(true);
 export const humanCardInteractive = signal(true);
 export const showNextRoundButton = signal(false);
 export const winner = signal('');
