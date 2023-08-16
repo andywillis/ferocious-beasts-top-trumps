@@ -6,12 +6,14 @@
 	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 	column-gap: var(--size-rem-2);
 	row-gap: var(--size-rem-3);
+
 }
 
 .onlyOneRow	{
 	max-height: 360px;
 	overflow: hidden;
 }
+
 
 @media (min-width: 721px) {
 	.grid {
