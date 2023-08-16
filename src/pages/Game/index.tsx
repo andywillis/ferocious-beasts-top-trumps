@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 
-import { MessageBox, Deck, Grid } from '../../components';
+import { MessageBox, Deck, Board } from '../../components';
 
 import { deckComputer, deckHuman, cards } from '../../store';
 
@@ -26,7 +26,7 @@ function Game() {
 
 	return (
 		<main className={style.main}>
-			<Grid>
+			<Board>
 				<Deck
 					type="computer"
 					totalCards={totalCards}
@@ -39,7 +39,7 @@ function Game() {
 					deck={deckHuman.value}
 					interactive
 				/>
-			</Grid>
+			</Board>
 		</main>
 	);
 }

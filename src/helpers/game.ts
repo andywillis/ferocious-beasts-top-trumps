@@ -3,6 +3,7 @@ import {
 	cards,
 	currentComputerCard,
 	computerCardVisible,
+	humanCardVisible,
 	deckComputer,
 	deckHuman,
 	deckBoard,
@@ -65,6 +66,8 @@ function updateMessageBox(message: string) {
 
 /**
  * initialiseGame
+ * 
+ * Reset state, update the message box
  *
  * @export
  */
@@ -76,6 +79,7 @@ export function initialiseGame() {
 	deckHuman.value = shuffled.slice(len / 2, len);
 
 	computerCardVisible.value = false;
+	humanCardVisible.value = true;
 	humanCardInteractive.value = true;
 	showNextRoundButton.value = false;
 	winner.value = '';
@@ -192,11 +196,15 @@ export function playNextRound() {
 	}
 
 	if (deckHuman.value.length === cards.value.length) {
+		computerCardVisible.value = false;
+		humanCardVisible.value = false;
 		resetMessageBox();
 		updateMessageBox(availableMessages.peek().humanwinner);
 	}
 	
 	if (deckComputer.value.length === cards.value.length) {
+		computerCardVisible.value = false;
+		humanCardVisible.value = false;
 		resetMessageBox();
 		updateMessageBox(availableMessages.peek().computerwinner);
 	}

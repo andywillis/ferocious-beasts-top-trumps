@@ -2,7 +2,11 @@ import { Status, Card } from '../index';
 
 import { CardType } from '../../types';
 
-import { computerCardVisible, humanCardInteractive } from '../../store';
+import {
+	computerCardVisible,
+	humanCardInteractive,
+	humanCardVisible
+} from '../../store';
 
 interface DeckProps {
 	type: string;
@@ -23,7 +27,7 @@ function Deck({ type, deck, totalCards, interactive }: DeckProps) {
 
 	function isVisible() {
 		return (type === 'computer' && computerCardVisible.value === true)
-			|| type === 'human';
+			|| (type === 'human' && humanCardVisible.value === true);
 	}
 
 	return (
