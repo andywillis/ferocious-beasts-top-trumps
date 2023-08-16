@@ -18,6 +18,6 @@ Or run the preview
 ## Design
 
 - No backend to make things simple. JSON is loaded immediately into state.
-- Used OpenProps to create a set of CSS variables used throughout.
+- Used OpenProps as a base to create a set design system rules (CSS variables) used throughout the app.
 - Grid/Flex used to allow for a responsive app. Currently optimised for desktop and iPad landscape.
 - Computer opponent to play against.
