@@ -4,6 +4,10 @@ An accessible Top Trumps game for all the family.
 
 [https://dancing-jelly-3cf4d2.netlify.app](https://dancing-jelly-3cf4d2.netlify.app)
 
+Or run the preview
+
+`pnpm/npm run preview`
+
 ## Tech
 
 - [React](react.dev/)
