@@ -330,6 +330,7 @@ export function playNextRound() {
 	// either the computer or human player has won, and update the
 	// the board accordingly
 	if (deckHuman.value.length === cards.value.length) {
+		deckComputer.value = [deckHuman.value.at(-1) as CardType];
 		computerCardVisible.value = false;
 		humanCardVisible.value = false;
 		resetMessageBox();
@@ -337,6 +338,7 @@ export function playNextRound() {
 	}
 	
 	if (deckComputer.value.length === cards.value.length) {
+		deckHuman.value = [deckComputer.value.at(-1) as CardType];
 		computerCardVisible.value = false;
 		humanCardVisible.value = false;
 		resetMessageBox();
