@@ -2,13 +2,14 @@
 	display: flex;
 	flex-direction: column;
 	justify-items: center;
-	margin: var(--size-rem-1);
+	margin-top: var(--size-rem-2);
+	/* min-height: calc(100vh - 30px); */
 	padding: var(--size-rem-2) var(--size-rem-1);
 }
 
 @media (min-width: 721px) {
 	.main {
-		margin: 0 var(--size-rem-4);
+		margin-bottom: var(--size-rem-4);
 		padding: 0 var(--size-rem-1);
 	}
 }

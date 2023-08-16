@@ -26,7 +26,7 @@
 
 @media (min-width: 721px) {
 	.messageBox {
-		font-size: var(--size-rem-09);
+		font-size: var(--size-rem-1);
 
 		& .nextRound {
 			font-size: var(--size-rem-09);

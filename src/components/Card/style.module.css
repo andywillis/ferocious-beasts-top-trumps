@@ -41,8 +41,9 @@
 	opacity: 0;
 }
 
+/* @media only screen and (max-height: 575.98px) and (orientation: landscape) { */
 @media (min-width: 721px) {
-	.card {
+		.card {
 		padding: var(--size-rem-025) var(--size-rem-025) 0 var(--size-rem-025);
 		& .name {
 			& h2 {

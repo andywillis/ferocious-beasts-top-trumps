@@ -1,5 +1,6 @@
 .footer {
-  top: 100vh;
+  /* top: 100vh; */
+	height: 30px;
   position: sticky;
 	border-top: var(--size-px-01) solid var(--color-blue-dark);
   text-align: right;
@@ -8,8 +9,8 @@
 	font-size: var(--size-rem-14);
 }
 
-@media (min-width: 1121px) {
+@media (min-width: 721px) {
 	.footer {
-		font-size: var(--size-rem-09);
+		font-size: var(--size-rem-1);
 	}
 }

@@ -23,7 +23,7 @@ function Home() {
 				<p>A fun card game for all the family</p>
 				<p>Play against a deadly computer opponent and win all the cards</p>
 			</section>
-			<Grid>
+			<Grid onlyoneRow>
 				{getRandomCards(cards.peek(), 3).map((card, index) => {
 					return (
 						<Card
