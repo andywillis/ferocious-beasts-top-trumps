@@ -19,7 +19,6 @@ function App() {
 				<Route path="/instructions" element={<Instructions />} />
 				<Route path="/viewcards" element={<ViewCards />} />
 			</Routes>
-			{/* <Footer text={`Made by Andy Willis, ${new Date().getFullYear()}`} /> */}
 		</>
 	);
 }
