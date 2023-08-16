@@ -3,7 +3,7 @@
 	flex-direction: column;
 	justify-content: center;
 	text-transform: uppercase;
-	font-size: var(--size-rem-08);
+	font-size: var(--size-rem-14);
 	margin-bottom: var(--size-rem-075);
 
 	& h3, p {
@@ -12,4 +12,16 @@
 		margin: 0;
 	}
 
+}
+
+@media (min-width: 721px) {
+	.status {
+		font-size: var(--size-rem-1);
+
+		& h3, p {
+			text-align: center;	
+			padding: 0;
+			margin: 0;
+		}
+	}
 }
