@@ -2,7 +2,6 @@ import style from './style.module.css';
 
 interface CardImageProps {
 	src: string;
-	alt: string;
 }
 
 /**
@@ -11,19 +10,16 @@ interface CardImageProps {
  * @param {CardImageProps} { src, alt, handleImageLoad }
  * @return {React.Element} CardImage component
  */
-function CardImage({ src, alt }: CardImageProps) {
-		
+function CardImage({ src }: CardImageProps) {
+
 	const cn = [
-		style.cardImage
+		style.cardImage,
+		style[src.replace('.webp', '')]
 	].join(' ');
 
 	return (
-		<img
-			width="250"
-			height="125"
+		<div
 			className={cn}
-			src={src}
-			alt={alt}
 		/>
 	);
 

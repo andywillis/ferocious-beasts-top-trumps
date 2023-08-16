@@ -1,9 +1,171 @@
 .cardImage {
+	width: 250px;
+	height: 125px;
 	animation: fadein 0.5s;
 }
 
 .hidden {
 	visibility: hidden;
+}
+
+.bat {
+	background-image: url('/images/bat.webp');
+}
+
+.bear {
+	background-image: url('/images/bear.webp');
+}
+
+.bison {
+	background-image: url('/images/bison.webp');
+}
+
+.capybara {
+	background-image: url('/images/capybara.webp');
+}
+
+.chameleon {
+	background-image: url('/images/chameleon.webp');
+}
+
+.cheetah {
+	background-image: url('/images/cheetah.webp');
+}
+
+.chicken {
+	background-image: url('/images/chicken.webp');
+}
+
+.chimpanzee {
+	background-image: url('/images/chimpanzee.webp');
+}
+
+.crocodile {
+	background-image: url('/images/crocodile.webp');
+}
+
+.crow {
+	background-image: url('/images/crow.webp');
+}
+
+.domestic-cat {
+	background-image: url('/images/domestic-cat.webp');
+}
+
+.eagle {
+	background-image: url('/images/eagle.webp');
+}
+
+.elephant {
+	background-image: url('/images/elephant.webp');
+}
+
+.elephant-shrew {
+	background-image: url('/images/elephant-shrew.webp');
+}
+
+.fennec-fox {
+	background-image: url('/images/fennec-fox.webp');
+}
+
+.fox {
+	background-image: url('/images/fox.webp');
+}
+
+.hippopotamus {
+	background-image: url('/images/hippopotamus.webp');
+}
+
+.honey-badger {
+	background-image: url('/images/honey-badger.webp');
+}
+
+.kangaroo {
+	background-image: url('/images/kangaroo.webp');
+}
+
+.koala {
+	background-image: url('/images/koala.webp');
+}
+
+.lion {
+	background-image: url('/images/lion.webp');
+}
+
+.margay {
+	background-image: url('/images/margay.webp');
+}
+
+.ostrich {
+	background-image: url('/images/ostrich.webp');
+}
+
+.otter {
+	background-image: url('/images/otter.webp');
+}
+
+.owl {
+	background-image: url('/images/owl.webp');
+}
+
+.pallas-cat {
+	background-image: url('/images/pallas-cat.webp');
+}
+
+.panda {
+	background-image: url('/images/panda.webp');
+}
+
+.parrot {
+	background-image: url('/images/parrot.webp');
+}
+
+.piranha {
+	background-image: url('/images/piranha.webp');
+}
+
+.polar-bear {
+	background-image: url('/images/polar-bear.webp');
+}
+
+.praying-mantis {
+	background-image: url('/images/praying-mantis.webp');
+}
+
+.quokka {
+	background-image: url('/images/quokka.webp');
+}
+
+.red-panda {
+	background-image: url('/images/red-panda.webp');
+}
+
+.scorpion {
+	background-image: url('/images/scorpion.webp');
+}
+
+.shark {
+	background-image: url('/images/shark.webp');
+}
+
+.sloth {
+	background-image: url('/images/sloth.webp');
+}
+
+.white-lipped-island-pit-viper {
+	background-image: url('/images/white-lipped-island-pit-viper.webp');
+}
+
+.spider {
+	background-image: url('/images/spider.webp');
+}
+
+.yak {
+	background-image: url('/images/yak.webp');
+}
+
+.zebra {
+	background-image: url('/images/zebra.webp');
 }
 
 @keyframes fadein {

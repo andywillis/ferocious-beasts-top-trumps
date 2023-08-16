@@ -46,8 +46,7 @@ function Card(props: CardType) {
 				</header>
 
 				<CardImage
-					src={`images/${image.name}`}
-					alt={image.alt}
+					src={image.name}
 				/>
 
 				<CardProperties
