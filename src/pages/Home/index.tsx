@@ -1,4 +1,3 @@
-/* eslint-disable max-len */
 import style from './style.module.css';
 
 import Card from '../../components/Card';
