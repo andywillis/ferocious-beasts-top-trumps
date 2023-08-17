@@ -1,11 +1,6 @@
 .cardImage {
 	width: 250px;
 	height: 125px;
-	animation: fadein 0.5s;
-}
-
-.hidden {
-	visibility: hidden;
 }
 
 .bat {
