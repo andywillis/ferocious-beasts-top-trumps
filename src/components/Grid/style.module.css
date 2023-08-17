@@ -8,7 +8,7 @@
 	row-gap: var(--size-rem-3);
 
 	&.onlyOneRow	{
-		max-height: 360px;
+		max-height: 380px;
 		overflow: hidden;
 	}
 	

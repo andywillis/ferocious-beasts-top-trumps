@@ -2,8 +2,8 @@
 	border: var(--size-px-01) solid var(--color-gray-dark);
 	border-radius: var(--size-px-05);
 	box-shadow:
-		var(--size-px-02)
-		var(--size-px-02)
+		0px
+		0px
 		var(--size-px-10)
 		0px
 		var(--color-shadow);
